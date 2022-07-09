@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+<link rel="shortcut icon" href="/assets/favicon.png"/>
+<link rel="stylesheet" href="/assets/fonts/fonts.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzrui.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiIcon/mzruiIcon.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/test-assets/test.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSlider/mzruiSlider.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiReorder/mzruiReorder.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiBeatlines/mzruiBeatlines.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiPeriodicWave/mzruiPeriodicWave.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiEnvelopeGraph/mzruiEnvelopeGraph.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiEnvelope/mzruiEnvelope.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiEnvelope/mzruiEnvelope.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiLFO/mzruiLFO.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiLFO/mzruiLFO.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiOscillator/mzruiOscillator.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiOscillator/mzruiOscillator.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSynthesizer/mzruiSynthesizer.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSynthesizer/mzruiSynthesizer.css"/>
+</head>
+<body>
+
+<!-- ....................................................................... -->
+<div id="TEST">
+	<mzrui-synthesizer></mzrui-synthesizer>
+</div>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzr-ui.js"></script>
+<script src="/mzr-ui-components/test-assets/test.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui--components/mzrwaPeriodicWaves/mzrwaPeriodicWaves.js"></script>
+<script src="/assets/mzrwaPeriodicWavesList-v1.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.html.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.js"></script>
+<script src="/mzr-ui-components/mzruiReorder/mzruiReorder.js"></script>
+<script src="/mzr-ui-components/mzruiBeatlines/mzruiBeatlines.js"></script>
+<script src="/mzr-ui-components/mzruiPeriodicWave/mzruiPeriodicWave.js"></script>
+<script src="/mzr-ui-components/mzruiEnvelopeGraph/mzruiEnvelopeGraph.js"></script>
+<script src="/mzr-ui-components/mzruiEnvelope/mzruiEnvelope.html.js"></script>
+<script src="/mzr-ui-components/mzruiEnvelope/mzruiEnvelope.js"></script>
+<script src="/mzr-ui-components/mzruiLFO/mzruiLFO.html.js"></script>
+<script src="/mzr-ui-components/mzruiLFO/mzruiLFO.js"></script>
+<script src="/mzr-ui-components/mzruiOscillator/mzruiOscillator.html.js"></script>
+<script src="/mzr-ui-components/mzruiOscillator/mzruiOscillator.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiSynthesizer/mzruiSynthesizer.html.js"></script>
+<script src="/mzr-ui-components/mzruiSynthesizer/mzruiSynthesizer.js"></script>
+
+<!-- ....................................................................... -->
+<script>
+const elSyn = document.querySelector( "mzrui-synthesizer" );
+const waves = mzrwaPeriodicWaves.loadWaves( mzrwaPeriodicWavesList );
+
+waves.forEach( ( w, name ) => mzruiPeriodicWave.addWave( name, w.real, w.imag ) );
+elSyn.setWaveList( waves );
+</script>
+</body>
+</html>

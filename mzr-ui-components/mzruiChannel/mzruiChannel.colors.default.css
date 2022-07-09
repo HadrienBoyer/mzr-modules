@@ -1,0 +1,13 @@
+mzrui-channel {
+	--mzruiChannel-bg: #555;
+	--mzruiChannel-bg2: #5b5b5b;
+	--mzruiChannel-selected-bg: #666;
+	--mzruiChannel-pan-color: var( --mzrui-col-pan );
+	--mzruiChannel-gain-color: var( --mzrui-col-gain );
+	--mzruiChannel-connect-input-color: #f99;
+	--mzruiChannel-connect-output-color: var( --mzrui-col-gain );
+	--mzruiChannel-toggle-bg: var( --mzrui-col-gain );
+	--mzruiChannel-toggleOff-bg: #fff2;
+	--mzruiChannel-analyser-bg: #222;
+	--mzruiChannel-name-font: var( --mzrui-font );
+}

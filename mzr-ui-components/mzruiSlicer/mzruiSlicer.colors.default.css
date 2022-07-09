@@ -1,0 +1,12 @@
+mzrui-slicer {
+	--mzruiSlicer-bg: #666;
+	--mzruiSlicer-color: #fff;
+	--mzruiSlicer-slicers-bg: #47475c;
+	--mzruiSlicer-source-bg: #334;
+	--mzruiSlicer-source-wave: var( --mzrui-col-pattern );
+	--mzruiSlicer-preview-wave-border: #fff2;
+	--mzruiSlicer-preview-wave-hl-bg: #fff1;
+	--mzruiSlicer-slice-bg: #44c4;
+	--mzruiSlicer-slice-hl-bg: #77f4;
+	--mzruiSlicer-slice-border: #32325a;
+}

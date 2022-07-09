@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+<link rel="shortcut icon" href="/assets/favicon.png"/>
+<link rel="stylesheet" href="/assets/fonts/fonts.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzrui.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/test-assets/test.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSlider/mzruiSlider.css"/>
+<style>
+body {
+	--test-content-w: 400px;
+	--test-content-h: 120px;
+}
+#testWrap {
+	overflow: initial;
+}
+#slider-wrap {
+	display: flex;
+	height: 100%;
+	gap: 8px;
+	--mzruiSlider-lineBgColor: #444;
+}
+#slider-wrap > div {
+	flex: 1;
+	display: flex;
+	gap: inherit;
+}
+#slider-wrap > div:first-child {
+	flex-direction: column;
+}
+#slider-wrap > div:first-child + div {
+	flex: .6;
+	flex-direction: column;
+}
+mzrui-slider .mzruiSlider-eventCatcher {
+	inset: -4px;
+}
+mzrui-slider.s0,
+mzrui-slider.s1,
+mzrui-slider.s2,
+mzrui-slider.s3,
+mzrui-slider.s4 {
+	width: 100%;
+	height: 8px;
+	min-width: 32px;
+	--mzruiSlider-lineColor: #ff9;
+}
+mzrui-slider.s3 {
+	--mzruiSlider-lineColor: #ddf;
+	height: 16px;
+}
+mzrui-slider.s4 {
+	--mzruiSlider-lineColor: #a8b;
+	min-height: 8px;
+	flex: 1;
+}
+mzrui-slider.s5,
+mzrui-slider.s6,
+mzrui-slider.s7,
+mzrui-slider.s8,
+mzrui-slider.s9 {
+	width: 8px;
+	height: 100%;
+	--mzruiSlider-lineColor: #c5426e;
+}
+mzrui-slider.s8 {
+	--mzruiSlider-lineColor: #fff;
+	width: 16px;
+}
+mzrui-slider.s9 {
+	--mzruiSlider-lineColor: #7b8;
+	min-width: 8px;
+	flex: 1;
+}
+mzrui-slider.sc1,
+mzrui-slider.sc2 {
+	--mzruiSlider-lineColor: #cbf;
+	min-width: 16px;
+}
+mzrui-slider.sc2 {
+	--mzruiSlider-lineColor: #db7;
+}
+</style>
+</head>
+<body>
+
+<!-- ....................................................................... -->
+<div id="TEST">
+	<div id="slider-wrap">
+		<div>
+			<mzrui-slider class="s0" type="linear-x" min="0" max="100" step="1" value="25" mousemove-size="800"></mzrui-slider>
+			<mzrui-slider class="s1" type="linear-x" min="0" max="100" step="1" value="50" mousemove-size="800"></mzrui-slider>
+			<mzrui-slider class="s2" type="linear-x" min="0" max="100" step="1" value="75" mousemove-size="800"></mzrui-slider>
+			<mzrui-slider class="s3" type="linear-x" min="0" max="100" step="1" value="25" mousemove-size="800"></mzrui-slider>
+			<mzrui-slider class="s4" type="linear-x" min="0" max="100" step="1" value="75" mousemove-size="800"></mzrui-slider>
+		</div>
+		<div>
+			<mzrui-slider class="sc1" type="circular" min="0" max="100" step="1" value="25" mousemove-size="800" stroke-width="8"></mzrui-slider>
+			<mzrui-slider class="sc2" type="circular" min="0" max="100" step="1" value="75" mousemove-size="800" stroke-width="8"></mzrui-slider>
+		</div>
+		<div>
+			<mzrui-slider class="s5" type="linear-y" min="0" max="100" step="1" value="25" mousemove-size="800"></mzrui-slider>
+			<mzrui-slider class="s6" type="linear-y" min="0" max="100" step="1" value="50" mousemove-size="800"></mzrui-slider>
+			<mzrui-slider class="s7" type="linear-y" min="0" max="100" step="1" value="75" mousemove-size="800"></mzrui-slider>
+			<mzrui-slider class="s8" type="linear-y" min="0" max="100" step="1" value="25" mousemove-size="800"></mzrui-slider>
+			<mzrui-slider class="s9" type="linear-y" min="0" max="100" step="1" value="75" mousemove-size="800"></mzrui-slider>
+		</div>
+	</div>
+</div>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzrui.js"></script>
+<script src="/mzr-ui-components/test-assets/test.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.html.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.js"></script>
+
+<!-- ....................................................................... -->
+<script>
+const sli = document.querySelector( "mzrui-slider" );
+
+</script>
+</body>
+</html>

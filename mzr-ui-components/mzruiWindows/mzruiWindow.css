@@ -1,0 +1,174 @@
+mzrui-window {
+	--mzruiWindow-radius: 2px;
+	--mzruiWindow-head-height: 28px;
+	--mzruiWindow-border-width: 2px;
+	--mzruiWindow-handler-width: 4px;
+	--mzruiWindow-title-opacity: .8;
+	position: absolute;
+	z-index: 0;
+	outline: 0;
+	color: var( --mzruiWindow-color );
+	border-radius: var( --mzruiWindow-radius );
+	transition: .2s;
+	transition-property: opacity, visibility;
+}
+mzrui-window:not( .mzruiWindow-show ) {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+mzrui-window:focus-within {
+	--mzruiWindow-title-opacity: 1;
+	--mzruiWindow-border-color: var( --mzruiWindow-focused-border-color );
+}
+.mzruiWindow-maximized {
+	--mzruiWindow-radius: 0;
+	inset: 0;
+	overflow: hidden;
+}
+.mzruiWindow-handlers::before,
+mzrui-window:not( .mzruiWindow-dragging ),
+.mzruiWindows-lowGraphics .mzruiWindow-dragging {
+	box-shadow: 0 0 0
+		var( --mzruiWindow-border-width )
+		var( --mzruiWindow-border-color );
+}
+
+/* .......................................................................... */
+.mzruiWindow-handlers {
+	position: absolute;
+	opacity: 0;
+	inset: 0;
+	margin: calc( var( --mzruiWindow-handler-width ) * -1 );
+}
+.mzruiWindow-handlers::before {
+	content: "";
+	z-index: 1;
+	position: absolute;
+	pointer-events: none;
+	border-radius: var( --mzruiWindow-radius );
+	inset: var( --mzruiWindow-handler-width );
+}
+.mzruiWindow-dragging .mzruiWindow-handlers {
+	opacity: 1;
+}
+.mzruiWindow-maximized .mzruiWindow-handlers,
+.mzruiWindow-minimized .mzruiWindow-handler {
+	display: none;
+}
+.mzruiWindow-handler {
+	position: absolute;
+	width: calc( var( --mzruiWindow-handler-width ) * 2 );
+	height: calc( var( --mzruiWindow-handler-width ) * 2 );
+}
+.mzruiWindow-handler[ data-dir="nw" ] { cursor: nw-resize; top: 0; left: 0; }
+.mzruiWindow-handler[ data-dir="ne" ] { cursor: ne-resize; top: 0; right: 0; }
+.mzruiWindow-handler[ data-dir="sw" ] { cursor: sw-resize; bottom: 0; left: 0; }
+.mzruiWindow-handler[ data-dir="se" ] { cursor: se-resize; bottom: 0; right: 0; }
+.mzruiWindow-handler[ data-dir="n" ] { cursor: n-resize; top: 0; width: 100%; }
+.mzruiWindow-handler[ data-dir="w" ] { cursor: w-resize; left: 0; height: 100%; }
+.mzruiWindow-handler[ data-dir="e" ] { cursor: e-resize; right: 0; height: 100%; }
+.mzruiWindow-handler[ data-dir="s" ] { cursor: s-resize; bottom: 0; width: 100%; }
+
+/* .......................................................................... */
+.mzruiWindow-wrap {
+	position: absolute;
+	overflow: hidden;
+	inset: 0;
+	border-radius: inherit;
+}
+.mzruiWindow-head {
+	display: flex;
+	position: absolute;
+	inset: 0;
+	height: var( --mzruiWindow-head-height );
+	font-size: 16px;
+	background-color: var( --mzruiWindow-head-bg );
+	user-select: none;
+	-webkit-user-select: none;
+}
+.mzruiWindow-dragging .mzruiWindow-head {
+	cursor: move;
+}
+.mzruiWindow-minimized .mzruiWindow-head {
+	border-radius: inherit;
+}
+.mzruiWindow-content {
+	position: absolute;
+	overflow: auto;
+	inset: var( --mzruiWindow-head-height ) 0 0;
+	background-color: var( --mzruiWindow-bg );
+	background-image: var( --mzruiWindow-bgImg );
+}
+.mzruiWindow-minimized .mzruiWindow-content {
+	display: none;
+}
+
+/* .......................................................................... */
+.mzruiWindow-icon,
+.mzruiWindow-title {
+	opacity: var( --mzruiWindow-title-opacity );
+	transition: .2s opacity;
+}
+.mzruiWindow-icon {
+	border: 0;
+	padding: 0;
+	outline: 0;
+	width: 32px;
+	min-width: 32px;
+	color: inherit;
+	cursor: inherit;
+	font-size: 16px;
+	background: none;
+}
+.mzruiWindow-title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: var( --mzruiWindow-head-height );
+}
+.mzruiWindow-headContent {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	padding-left: .5em;
+}
+.mzruiWindow-headBtns {
+	height: 100%;
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+}
+
+/* .......................................................................... */
+.mzruiWindow-headBtn {
+	border: 0;
+	padding: 0;
+	outline: 0;
+	width: var( --mzruiWindow-head-height );
+	height: 100%;
+	cursor: pointer;
+	color: inherit;
+	font-size: 14px;
+	opacity: .6;
+	transition: .2s;
+	transition-property: opacity, background-color;
+	background: none;
+}
+.mzruiWindow-headBtn:focus,
+.mzruiWindow-headBtn:hover {
+	opacity: 1;
+	background-color: rgba( 0, 0, 0, .1 );
+}
+.mzruiWindow-headBtn[ data-icon="close" ]:focus,
+.mzruiWindow-headBtn[ data-icon="close" ]:hover {
+	background-color: var( --mzruiWindow-btn-close-color );
+}
+.mzruiWindow-minimized .mzruiWindow-headBtn[ data-icon="minimize" ],
+.mzruiWindow-maximized .mzruiWindow-headBtn[ data-icon="maximize" ],
+mzrui-window:not( .mzruiWindow-minimized ):not( .mzruiWindow-maximized )
+.mzruiWindow-headBtn[ data-icon="restore" ] {
+	display: none;
+}

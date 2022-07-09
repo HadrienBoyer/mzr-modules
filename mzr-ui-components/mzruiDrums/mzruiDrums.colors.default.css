@@ -1,0 +1,14 @@
+mzrui-drums {
+	--mzruiDrums-color: #fff;
+	--mzruiDrums-drum-bg: rgba( var( --mzrui-rgb-pattern ), .8 );
+	--mzruiDrums-drum-color: #000;
+	--mzruiDrums-drumprop-bg: #0002;
+	--mzruiDrums-drumprop-color: #0004;
+	--mzruiDrums-drumcut-bg: #48ad;
+	--mzruiDrums-line-border: #2e4145;
+	--mzruiDrums-line-mute-bg: #0003;
+	--mzruiDrums-loop-bg: #000;
+	--mzruiDrums-currentTime-bg: rgba( var( --mzrui-rgb-currentTimeCursor ), .07 );
+	--mzruiDrums-drumHover-border: var( --mzrui-col-pattern );
+	--mzruiDrums-drumHover-bg: rgba( var( --mzrui-rgb-pattern ), .2 );
+}

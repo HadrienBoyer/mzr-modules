@@ -1,0 +1,121 @@
+.mzruiDAW-cmp {
+	box-sizing: border-box;
+	display: flex;
+	color: var( --mzruiDAW-cmp-text );
+	height: var( --mzruiDAW-cmp-height );
+	font-size: var( --mzruiDAW-cmp-text-size );
+	line-height: var( --mzruiDAW-cmp-height );
+	background-color: var( --mzruiDAW-cmp-bg );
+	filter: brightness( .9 );
+}
+.mzruiDAW-dropdown-list[ data-list="local" ] .mzruiDAW-cmp { --mzruiDAW-cmp-bg: var( --mzruiDAW-cmp-local-bg ); }
+.mzruiDAW-dropdown-list[ data-list="cloud" ] .mzruiDAW-cmp { --mzruiDAW-cmp-bg: var( --mzruiDAW-cmp-cloud-bg ); }
+.mzruiDAW-cmp:nth-child( odd ) {
+	filter: brightness( .85 );
+}
+.mzruiDAW-cmp.mzruiDAW-cmp-loaded {
+	filter: none;
+}
+
+/* .......................................................................... */
+.mzruiDAW-cmp-btn {
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	font-size: 16px;
+	background: none;
+}
+.mzruiDAW-cmp-btn-light {
+	opacity: .7;
+	padding: 0 8px;
+	transition: .2s opacity;
+}
+.mzruiDAW-cmp-btn-light:focus,
+.mzruiDAW-cmp-btn-light:hover {
+	opacity: 1;
+}
+
+/* .......................................................................... */
+.mzruiDAW-cmp-btn[ data-action="cmp-save" ] {
+	width: 32px;
+	margin-left: -32px;
+	background-color: var( --mzruiDAW-save-bg );
+	transition: .2s;
+	transition-property: margin-left, color, background-color, visibility;
+	visibility: hidden;
+}
+mzrui-daw:not( [ saved ] ) .mzruiDAW-cmp-loaded .mzruiDAW-cmp-btn[ data-action="cmp-save" ] {
+	visibility: visible;
+	margin-left: 0;
+}
+.mzruiDAW-cmp-btn[ data-action="cmp-save" ]:hover {
+	color: var( --mzruiDAW-save-bg );
+	background-color: var( --mzruiDAW-cmp-text );
+}
+
+/* .......................................................................... */
+.mzruiDAW-cmp-info {
+	flex: 1;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 6px 6px 4px;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	font-size: 13px;
+	line-height: 1em;
+	transition: .2s;
+	transition-property: padding-left, opacity;
+	opacity: .7;
+}
+.mzruiDAW-cmp-info:focus,
+.mzruiDAW-cmp-info:hover,
+.mzruiDAW-cmp-loaded .mzruiDAW-cmp-info {
+	opacity: 1;
+}
+.mzruiDAW-cmp-info > div {
+	pointer-events: none;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/* .......................................................................... */
+.mzruiDAW-cmp-name {
+	max-width: 100%;
+	font-weight: bold;
+	border-radius: 2px;
+	padding-right: .4ch;
+	transition: .2s;
+	transition-property: box-shadow, color, background-color;
+}
+.mzruiDAW-cmp-info:focus .mzruiDAW-cmp-name,
+.mzruiDAW-cmp-info:hover .mzruiDAW-cmp-name {
+	color: var( --mzruiDAW-cmp-bg );
+	box-shadow: 0 0 0 2px var( --mzruiDAW-cmp-text );
+	background-color: var( --mzruiDAW-cmp-text );
+}
+mzrui-daw:not( [ saved ] ) .mzruiDAW-cmp-loaded .mzruiDAW-cmp-name::before {
+	content: "*";
+}
+.mzruiDAW-cmp-name:empty::after {
+	font-style: italic;
+	content: "Untitled";
+}
+
+/* .......................................................................... */
+.mzruiDAW-cmp-bpm-wrap,
+.mzruiDAW-cmp-duration-wrap {
+	display: inline-flex;
+	align-items: center;
+	font: 14px var( --mzrui-font-number );
+}
+.mzruiDAW-cmp-duration-wrap {
+	margin-right: 10px;
+}
+.mzruiDAW-cmp-info .mzruiIcon {
+	margin-right: 4px;
+	opacity: .4;
+}

@@ -1,0 +1,13 @@
+.mzruiDAW-areaTime {
+	grid-area: areaTime;
+	padding: 10px;
+	border-radius: var( --radius );
+	background-color: var( --mzruiDAW-currentTime-bg );
+}
+.mzruiDAW-areaTime mzrui-slider {
+	--mzruiSlider-lineColor: var( --mzruiDAW-currentTime-lineColor );
+	--mzruiSlider-lineBgColor: var( --mzruiDAW-currentTime-lineBgColor );
+}
+.mzruiDAW-areaTime .mzruiSlider-eventCatcher {
+	inset: -10px;
+}

@@ -1,0 +1,13 @@
+mzrui-popup {
+	--mzruiPopup-dur: .4s;
+	--mzruiPopup-bg: #555;
+	--mzruiPopup-btn-bg: #999;
+	--mzruiPopup-btnOk-bg: #67a;
+	--mzruiPopup-radius: 4px;
+	--mzruiPopup-padding: 10px;
+	--mzruiPopup-minWidth: 250px;
+	--mzruiPopup-header-bg: #333;
+	--mzruiPopup-header-fontSize: 16px;
+	--mzruiPopup-body-fontSize: 14px;
+	--mzruiPopup-overlay-bg: #0009;
+}

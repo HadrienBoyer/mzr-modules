@@ -1,0 +1,9 @@
+mzrui-slidergroup {
+	--mzruiSliderGroup-currentTime-color: var( --mzrui-col-currentTimeCursor );
+	--mzruiSliderGroup-defaultValue-color: #0004;
+	--mzruiSliderGroup-slider-width: 6px;
+	--mzruiSliderGroup-slider-bg: #0002;
+	--mzruiSliderGroup-slider-color: rgba( var( --mzrui-rgb-pattern ), .8 );
+	--mzruiSliderGroup-slider-color-selected: rgba( var( --mzrui-rgb-patternSelected ), .8 );
+	--mzruiSliderGroup-loop-color: #0004;
+}

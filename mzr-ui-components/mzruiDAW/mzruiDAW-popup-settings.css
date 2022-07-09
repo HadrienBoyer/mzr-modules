@@ -1,0 +1,20 @@
+.mzruiDAW-popup-settings {
+	width: 480px;
+}
+.mzruiDAW-popup-settings .mzruiPopup-row-values {
+	width: 200px;
+}
+.mzruiDAW-uiRateFps {
+	font-size: 16px;
+	font-family: var( --mzrui-font-number );
+	white-space: pre;
+}
+.mzruiDAW-uiRateFps::after {
+	content: " fps";
+	font-family: var( --mzrui-font );
+	font-size: 12px;
+	opacity: .6;
+}
+.mzruiDAW-popup-settings input[ name="uiRateFPS" ] {
+	min-width: 0;
+}

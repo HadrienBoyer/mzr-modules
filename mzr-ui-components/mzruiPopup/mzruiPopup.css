@@ -1,0 +1,141 @@
+mzrui-popup {
+	display: flex;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	inset: 0;
+	z-index: 2147483647;
+	color: #fff;
+	background-color: var( --mzruiPopup-overlay-bg );
+	backdrop-filter: blur( 10px );
+	transition: var( --mzruiPopup-dur );
+	transition-property: visibility, opacity;
+}
+mzrui-popup:not( .mzruiPopup-show ) {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.mzruiPopup-window {
+	overflow: hidden;
+	min-width: var( --mzruiPopup-minWidth );
+	border-radius: var( --mzruiPopup-radius );
+	background-color: var( --mzruiPopup-bg );
+	outline: 0;
+	box-shadow: 0 0 50px #000;
+}
+.mzruiPopup-window:focus-within {
+	box-shadow:
+		0 0 1px 2px #69b,
+		0 0 50px #000;
+}
+.mzruiPopup-noCancel .mzruiPopup-cancel,
+.mzruiPopup-noText .mzruiPopup-inputText {
+	display: none;
+}
+
+.mzruiPopup-head {
+	padding: var( --mzruiPopup-padding );
+	font-size: var( --mzruiPopup-header-fontSize );
+	background-color: var( --mzruiPopup-header-bg );
+}
+.mzruiPopup-body {
+	font-size: var( --mzruiPopup-body-fontSize );
+	padding: var( --mzruiPopup-padding );
+}
+.mzruiPopup-content:not( :empty ) + .mzruiPopup-message,
+.mzruiPopup-content:not( :empty ) ~ input {
+	display: none;
+}
+
+.mzruiPopup-inputText,
+.mzruiPopup-btns input {
+	padding: .6em 1.25em;
+	border: 0;
+	border-radius: 4px;
+}
+.mzruiPopup-window input,
+.mzruiPopup-window select {
+	outline: 0;
+}
+.mzruiPopup-window input:focus,
+.mzruiPopup-window select:focus {
+	box-shadow: 0 0 1px 2px #69b;
+}
+.mzruiPopup-inputText {
+	box-sizing: border-box;
+	padding: 8px;
+	width: 100%;
+	font-size: 14px;
+	height: 32px;
+}
+.mzruiPopup-btns {
+	margin-top: var( --mzruiPopup-padding );
+	text-align: center;
+}
+.mzruiPopup-btns input {
+	color: #fff;
+	font-weight: bold;
+	font-family: inherit;
+	background-color: var( --mzruiPopup-btn-bg );
+	cursor: pointer;
+}
+.mzruiPopup-btns input + input {
+	margin-left: var( --mzruiPopup-padding );
+}
+.mzruiPopup-btns .mzruiPopup-ok {
+	background-color: var( --mzruiPopup-btnOk-bg );
+}
+
+/* .......................................................................... */
+.mzruiPopup-content a {
+	color: inherit;
+	text-decoration: none;
+}
+.mzruiPopup-content a:hover {
+	text-decoration: underline;
+}
+.mzruiPopup-content fieldset {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid #444;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.mzruiPopup-content legend {
+	font-size: 12px;
+	opacity: .5;
+}
+.mzruiPopup-content input[ type="checkbox" ],
+.mzruiPopup-content input[ type="radio" ] {
+	margin: 0 8px 0 0;
+}
+.mzruiPopup-content input[ type="range" ] {
+	min-width: 0;
+}
+
+/* .......................................................................... */
+.mzruiPopup-row {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	padding: 4px;
+	gap: 6px;
+}
+.mzruiPopup-row + .mzruiPopup-row {
+	margin-top: 6px;
+}
+.mzruiPopup-row-title {
+	flex: 1;
+	font-size: 13px;
+}
+.mzruiPopup-row-values,
+.mzruiPopup-row-values label {
+	display: flex;
+	align-items: center;
+	font-family: var( --mzrui-font-monospace );
+	gap: .6ch;
+}
+.mzruiPopup-row-values label {
+	cursor: pointer;
+}

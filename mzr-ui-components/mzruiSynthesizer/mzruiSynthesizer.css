@@ -1,0 +1,89 @@
+mzrui-synthesizer {
+	overflow: auto;
+	position: relative;
+	box-sizing: border-box;
+	color: var( --mzruiSynthesizer-color );
+	scrollbar-width: thin;
+	scrollbar-color: #ddd #222;
+}
+
+/* .......................................................................... */
+.mzruiSynthesizer-head {
+	display: flex;
+	align-items: center;
+	padding-right: 8px;
+	font-size: 14px;
+	line-height: 1em;
+	user-select: none;
+	background-color: var( --mzruiSynthesizer-head-bg );
+}
+.mzruiSynthesizer-headTitle {
+	opacity: .3;
+	line-height: 24px;
+	margin-left: 6px;
+}
+.mzruiSynthesizer-label {
+	width: 42px;
+	margin-left: 6px;
+	text-align: center;
+	font-size: 12px;
+	opacity: .5;
+}
+.mzruiSynthesizer-labelPitch {
+	margin-left: auto;
+}
+
+/* .......................................................................... */
+.mzruiSynthesizer-env,
+.mzruiSynthesizer-lfo {
+	height: 118px;
+}
+
+/* .......................................................................... */
+.mzruiSynthesizer-headOscs {
+	height: 24px;
+}
+.mzruiSynthesizer-oscList {
+	display: grid;
+	grid-auto-flow: row;
+	grid-auto-rows: min-content;
+	counter-reset: count-osc;
+	background-color: var( --mzruiSynthesizer-bg );
+}
+
+/* .......................................................................... */
+mzrui-synthesizer mzrui-oscillator {
+	transition: .2s filter;
+}
+mzrui-synthesizer mzrui-oscillator:hover {
+	filter: brightness( 1.05 );
+}
+mzrui-synthesizer mzrui-oscillator:only-of-type .mzruiOscillator-remove {
+	display: none;
+}
+
+/* .......................................................................... */
+.mzruiSynthesizer-newOsc {
+	position: relative;
+	order: 2147483647;
+	border: 0;
+	height: 52px;
+	color: inherit;
+	font-size: 18px;
+	cursor: pointer;
+	border-radius: 2px;
+	background: none;
+	opacity: .4;
+	transition: .2s opacity;
+}
+.mzruiSynthesizer-newOsc:focus,
+.mzruiSynthesizer-newOsc:hover {
+	opacity: .6;
+}
+.mzruiSynthesizer-newOsc::before {
+	position: absolute;
+	content: "";
+	inset: 6px;
+	opacity: .4;
+	border: 2px dashed;
+}

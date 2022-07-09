@@ -1,0 +1,22 @@
+.mzruiDAW-areaHelp {
+	grid-area: areaHelp;
+	justify-content: end;
+}
+
+.mzruiDAW-btn[ data-action="about" ] {
+	--mzrui-color: var( --mzruiDAW-about-color );
+}
+
+.mzruiDAW-btn[ data-action="cookies" ] {
+	--mzrui-color: var( --mzruiDAW-cookies-color );
+	animation: infinite mzruiDAW-cookies-anim 5s;
+}
+mzrui-daw[ oki-cookies ] .mzruiDAW-btn[ data-action="cookies" ] {
+	display: none;
+}
+
+@keyframes mzruiDAW-cookies-anim {
+	30% { box-shadow: none; }
+	35% { box-shadow: 0 0 0 2px var( --mzruiDAW-cookies-color ); }
+	100% { box-shadow: 0 0 0 2px transparent; }
+}

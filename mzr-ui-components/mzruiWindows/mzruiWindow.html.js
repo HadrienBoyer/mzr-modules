@@ -1,0 +1,28 @@
+"use strict";
+
+MZRUI.$setTemplate( "mzrui-window", () => [
+	MZRUI.$createElement( "div", { class: "mzruiWindow-handlers" },
+		MZRUI.$createElement( "div", { class: "mzruiWindow-handler", "data-dir": "n" } ),
+		MZRUI.$createElement( "div", { class: "mzruiWindow-handler", "data-dir": "e" } ),
+		MZRUI.$createElement( "div", { class: "mzruiWindow-handler", "data-dir": "s" } ),
+		MZRUI.$createElement( "div", { class: "mzruiWindow-handler", "data-dir": "w" } ),
+		MZRUI.$createElement( "div", { class: "mzruiWindow-handler", "data-dir": "nw" } ),
+		MZRUI.$createElement( "div", { class: "mzruiWindow-handler", "data-dir": "ne" } ),
+		MZRUI.$createElement( "div", { class: "mzruiWindow-handler", "data-dir": "sw" } ),
+		MZRUI.$createElement( "div", { class: "mzruiWindow-handler", "data-dir": "se" } ),
+	),
+	MZRUI.$createElement( "div", { class: "mzruiWindow-wrap" },
+		MZRUI.$createElement( "div", { class: "mzruiWindow-head" },
+			MZRUI.$createElement( "button", { class: "mzruiWindow-icon mzruiIcon", tabindex: -1 } ),
+			MZRUI.$createElement( "div", { class: "mzruiWindow-title" } ),
+			MZRUI.$createElement( "div", { class: "mzruiWindow-headContent" } ),
+			MZRUI.$createElement( "div", { class: "mzruiWindow-headBtns" },
+				MZRUI.$createElement( "button", { class: "mzruiWindow-headBtn mzruiIcon", "data-icon": "minimize", title: "Minimize" } ),
+				MZRUI.$createElement( "button", { class: "mzruiWindow-headBtn mzruiIcon", "data-icon": "restore", title: "Restore" } ),
+				MZRUI.$createElement( "button", { class: "mzruiWindow-headBtn mzruiIcon", "data-icon": "maximize", title: "Maximize" } ),
+				MZRUI.$createElement( "button", { class: "mzruiWindow-headBtn mzruiIcon", "data-icon": "close", title: "Close" } ),
+			),
+		),
+		MZRUI.$createElement( "div", { class: "mzruiWindow-content" } ),
+	),
+] );

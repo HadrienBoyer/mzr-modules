@@ -1,0 +1,83 @@
+mzrui-clock {
+	display: flex;
+	height: 100%;
+	color: var( --mzruiClock-color );
+	border-radius: 4px;
+	font-size: 22px;
+	user-select: none;
+}
+
+.mzruiClock-relative {
+	position: relative;
+	height: 100%;
+	padding-left: 8px;
+	border-top-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+	background-color: var( --mzruiClock-bg );
+}
+.mzruiClock-absolute {
+	display: flex;
+	position: absolute;
+	white-space: nowrap;
+	align-items: baseline;
+	padding-top: 3px;
+	font-family: var( --mzrui-font-number );
+}
+
+.mzruiClock-modes {
+	position: relative;
+	display: flex;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	padding: 6px 8px;
+	border-top-right-radius: inherit;
+	border-bottom-right-radius: inherit;
+	cursor: pointer;
+	color: inherit;
+	font-size: inherit;
+	background-color: var( --mzruiClock-bg );
+	flex-direction: column;
+	justify-content: space-between;
+}
+.mzruiClock-modes:focus {
+	box-shadow: 0 0 1px 2px #69b;
+}
+.mzruiClock-mode {
+	width: 8px;
+	height: 8px;
+	border: 2px solid;
+	border-radius: 2px;
+	box-sizing: border-box;
+	opacity: .5;
+}
+mzrui-clock[ mode="beat" ] .mzruiClock-beat,
+mzrui-clock[ mode="second" ] .mzruiClock-second {
+	opacity: 1;
+	background-color: currentColor;
+}
+
+.mzruiClock-b::before {
+	content: ":";
+	margin: 0 .1em;
+}
+.mzruiClock-c {
+	font-size: 12px;
+	opacity: .5;
+}
+.mzruiClock-c::before {
+	content: ".";
+	margin: 0 .2em;
+}
+
+.mzruiClock-modeText {
+	position: absolute;
+	top: 4px;
+	right: 0;
+	font-size: 8px;
+	font-family: var( --mzrui-font );
+	opacity: .3;
+	pointer-events: none;
+}
+mzrui-clock[ mode="beat" ] .mzruiClock-modeText::before { content: "beat"; }
+mzrui-clock[ mode="second" ] .mzruiClock-modeText::before { content: "sec"; }

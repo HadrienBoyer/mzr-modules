@@ -1,0 +1,88 @@
+:root {
+	--mzruiDragline-color: #fff;
+	--mzruiDragline-dotSize: 8px;
+	--mzruiDragline-dotRad: 50%;
+	--mzruiDragline-lineSize: 4px;
+}
+
+/* ................................................................ */
+.mzruiDragline {
+	position: absolute;
+	max-width: 0;
+	max-height: 0;
+	color: var( --mzruiDragline-color );
+}
+.mzruiDragline-dragging,
+.mzruiDragline-dragging .mzruiDragline-to {
+	pointer-events: none;
+}
+
+/* ................................................................ */
+.mzruiDragline-main {
+	position: relative;
+	pointer-events: none;
+}
+
+/* ................................................................ */
+.mzruiDragline-line {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: var( --mzruiDragline-lineSize );
+	stroke-linecap: round;
+}
+.mzruiDragline-down .mzruiDragline-line {
+	top: 0;
+	bottom: auto;
+}
+.mzruiDragline-right .mzruiDragline-line {
+	left: 0;
+	right: auto;
+}
+
+/* ................................................................ */
+.mzruiDragline-to {
+	position: absolute;
+	width: var( --mzruiDragline-dotSize );
+	height: var( --mzruiDragline-dotSize );
+	margin: calc( var( --mzruiDragline-dotSize ) / -2 );
+	cursor: pointer;
+	border-radius: var( --mzruiDragline-dotRad );
+	pointer-events: all;
+	background-color: var( --mzruiDragline-color );
+	transition: .2s background-color;
+}
+.mzruiDragline-down .mzruiDragline-to { bottom: 0; }
+.mzruiDragline-right .mzruiDragline-to { right: 0; }
+.mzruiDragline-main:not( .mzruiDragline-down ) .mzruiDragline-to { top: 0; }
+.mzruiDragline-main:not( .mzruiDragline-right ) .mzruiDragline-to { left: 0; }
+
+/* ................................................................ */
+.mzruiDragline-drop {
+	position: relative;
+	max-width: 0;
+	max-height: 0;
+}
+.mzruiDragline-drop::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin: 0;
+	background-color: var( --mzruiDragline-color );
+	transition: .2s all;
+}
+.mzruiDragline-dropActive::before {
+	width: var( --mzruiDragline-dotSize );
+	height: var( --mzruiDragline-dotSize );
+	margin: calc( var( --mzruiDragline-dotSize ) / -2 );
+	cursor: pointer;
+	border-radius: var( --mzruiDragline-dotRad );
+}
+.mzruiDragline-dropActive:hover::before {
+	transform: scale( 2 );
+}

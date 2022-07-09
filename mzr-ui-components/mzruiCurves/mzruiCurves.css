@@ -1,0 +1,30 @@
+mzrui-curves {
+	display: block;
+	position: relative;
+	height: 100%;
+}
+.mzruiCurves-svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.mzruiCurves-markText {
+	fill: currentColor;
+	font-size: 10px;
+	opacity: .2;
+}
+.mzruiCurves-markBg {
+	fill: currentColor;
+	opacity: .03;
+}
+.mzruiCurves-line {
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-dasharray: 4;
+	opacity: .1;
+}
+.mzruiCurves-curve {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 3;
+}

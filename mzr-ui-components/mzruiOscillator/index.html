@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+<link rel="shortcut icon" href="/assets/favicon.png"/>
+<link rel="stylesheet" href="/assets/fonts/fonts.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzrui.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiIcon/mzruiIcon.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/test-assets/test.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiPeriodicWave/mzruiPeriodicWave.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSlider/mzruiSlider.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiOscillator/mzruiOscillator.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiOscillator/mzruiOscillator.css"/>
+
+<!-- ....................................................................... -->
+<style>
+body {
+	--test-content-w: 400px;
+	--test-content-minh: 64px;
+}
+</style>
+</head>
+<body>
+
+<!-- ....................................................................... -->
+<div id="TEST">
+	<mzrui-oscillator type="sine" detune="0" gain=".75" pan=".25"></mzrui-oscillator>
+</div>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui--components/gsmzrPeriodicWaves/gsmzrPeriodicWaves.js"></script>
+<script src="/assets/gsmzrPeriodicWavesList-v1.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzrui.js"></script>
+<script src="/mzr-ui-components/test-assets/test.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiPeriodicWave/mzruiPeriodicWave.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.html.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiOscillator/mzruiOscillator.html.js"></script>
+<script src="/mzr-ui-components/mzruiOscillator/mzruiOscillator.js"></script>
+
+<!-- ....................................................................... -->
+<script>
+const elOsc = document.querySelector( "mzrui-oscillator" );
+const waves = gsmzrPeriodicWaves.loadWaves( gsmzrPeriodicWavesList );
+
+waves.forEach( ( w, name ) => mzruiPeriodicWave.addWave( name, w.real, w.imag ) );
+elOsc.addWaves( Array.from( waves.keys() ) );
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+mzrui-daw {
+	--mzruiDAW-bg: #444;
+	--mzruiDAW-content-bg: #222;
+	--mzruiDAW-color: #ddd;
+	--mzruiDAW-playPauseStop-bg: #67a;
+	--mzruiDAW-save-bg: #ba5d5d;
+	--mzruiDAW-currentTime-bg: #0003;
+	--mzruiDAW-currentTime-lineColor: #abd;
+	--mzruiDAW-currentTime-lineBgColor: #222;
+	--mzruiDAW-btn-bg: #ffffff1a;
+	--mzruiDAW-head-winBtn-bg: #222;
+	--mzruiDAW-head-winBtn-open-bg: #ff9;
+	--mzruiDAW-export-color: #ff9;
+	--mzruiDAW-about-color: #ff9;
+	--mzruiDAW-cookies-color: #ff9;
+	--mzruiDAW-dropdown-shadow: 20px 10px #0006;
+	--mzruiDAW-history-bg: #777;
+	--mzruiDAW-history-action-bg: #454750;
+	--mzruiDAW-history-action-color: #ddd;
+	--mzruiDAW-history-action-light-bg: #67a;
+	--mzruiDAW-history-action-lightoff-bg: #1a1a1a;
+	--mzruiDAW-cmps-color: #9ad;
+	--mzruiDAW-cmps-btn-bg: #444;
+	--mzruiDAW-cmps-btn-newCmp-color: #ff9;
+	--mzruiDAW-cmp-cloud-bg: #4c71af;
+	--mzruiDAW-cmp-local-bg: #67a;
+	--mzruiDAW-cmp-text: #fff;
+	--mzruiDAW-cmp-height: 42px;
+	--mzruiDAW-cmp-text-size: 18px;
+	--mzruiDAW-winBtn-bg: #444;
+	--mzruiDAW-winBtn-chan-color: #ce93d8;
+	--mzruiDAW-winBtn-synth-color: #a5d6a7;
+	--mzruiDAW-winBtn-slices-color: #e29d8a;
+	--mzruiDAW-winBtn-pattern-color: #81d4fa;
+}

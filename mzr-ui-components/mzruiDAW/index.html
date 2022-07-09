@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+<link rel="shortcut icon" href="/assets/favicon.png"/>
+<link rel="stylesheet" href="/assets/fonts/fonts.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzrui.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiIcon/mzruiIcon.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/test-assets/test.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiPopup/mzruiPopup.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiPopup/mzruiPopup.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiClock/mzruiClock.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiClock/mzruiClock.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiPanels/mzruiPanels.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiPanels/mzruiPanels.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSlider/mzruiSlider.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSpectrum/mzruiSpectrum.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-btn.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-cmp.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-dropdown.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-area-user.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-area-save.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-area-ctrl.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-area-time.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-area-hist.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-area-wins.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-area-help.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-area-vers.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-auth.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-open.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-about.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-tempo.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-export.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-settings.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-shortcuts.css"/>
+
+<!-- ....................................................................... -->
+<style>
+body {
+	--test-content-w: 1100px;
+	--test-content-h: 420px;
+	--test-content-resize: both;
+}
+#testWrap {
+	display: flex;
+}
+</style>
+</head>
+<body>
+
+<!-- ....................................................................... -->
+<div id="TEST">
+	<mzrui-daw focus="up" bpm="120" timedivision="4/4"></mzrui-daw>
+</div>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui--components/gsmzrBPMTap/gsmzrBPMTap.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzrui.js"></script>
+<script src="/mzr-ui-components/test-assets/test.js"></script>
+<script src="/mzr-ui-components/mzruiPopup/mzruiPopup.html.js"></script>
+<script src="/mzr-ui-components/mzruiPopup/mzruiPopup.js"></script>
+<script src="/mzr-ui-components/mzruiAnalyser/mzruiAnalyser.js"></script>
+<script src="/mzr-ui-components/mzruiClock/mzruiClock.html.js"></script>
+<script src="/mzr-ui-components/mzruiClock/mzruiClock.js"></script>
+<script src="/mzr-ui-components/mzruiPanels/mzruiPanels.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.html.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.js"></script>
+<script src="/mzr-ui-components/mzruiSpectrum/mzruiSpectrum.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW.html.js"></script>
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-auth.html.js"></script>
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-open.html.js"></script>
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-about.html.js"></script>
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-tempo.html.js"></script>
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-export.html.js"></script>
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-cookies.html.js"></script>
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-settings.html.js"></script>
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW-popup-shortcuts.html.js"></script>
+<script src="/mzr-ui-components/mzruiDAW/mzruiDAW.js"></script>
+
+<!-- ....................................................................... -->
+<script>
+const el = document.querySelector( "mzrui-daw" );
+
+MZRUI.$setAttribute( el, "version", "3.14.15" );
+// MZRUI.$setAttribute( el, "logged", true );
+// MZRUI.$setAttribute( el, "logging", true );
+// MZRUI.$setAttribute( el, "focus", "down" );
+MZRUI.$setAttribute( el, "saved", false );
+MZRUI.$setAttribute( el, "samplerate", 48000 );
+MZRUI.$setAttribute( el, "uirate", 5 );
+// MZRUI.$setAttribute( el, "windowslowgraphics", true );
+MZRUI.$setAttribute( el, "oki-cookies", false );
+MZRUI.$setAttribute( el, "duration", 8 );
+MZRUI.$setAttribute( el, "bpm", 240 );
+MZRUI.$setAttribute( el, "currentcomposition", "local:idLOCA" );
+
+el.addComposition( { id: "idLOCA", name: "my first compo", bpm: 105, duration: 16, options: { saveMode: "local" } } );
+el.addComposition( { id: "idLOCB", name: "a second compo", bpm: 90, duration: 24, options: { saveMode: "local" } } );
+el.addComposition( { id: "idONL1", name: "compo online", bpm: 135, duration: 21, options: { saveMode: "cloud" } } );
+el.addComposition( { id: "idONL2", name: "compo online 2", bpm: 135, duration: 21, options: { saveMode: "cloud" } } );
+el.deleteComposition( { id: "idONL1", name: "compo online", bpm: 135, duration: 21, options: { saveMode: "cloud" } } );
+
+MZRUI.$setAttribute( el, "currentcomposition", "cloud:idONL2" );
+// MZRUI.$setAttribute( el, "saving", true );
+
+el.toggleWindow( "main", true );
+el.toggleWindow( "mixer", false );
+
+el.stackAction( "mute", "shhhhhhhh..." );
+el.stackAction( "unmute", "make some noise" );
+el.stackAction( "plus", "add some love" );
+el.stackAction( "minus", "remove some hate" );
+el.stackAction( "pen", "rename stuff" );
+el.stackAction( "osc-sine", "synth params" );
+el.stackAction( "keys", "keyyyyysss" );
+el.stackAction( "arrows", "move elements" );
+el.stackAction( "slices", "slices stuff" );
+el.stackAction( "loop", "loop loop loooooooop" );
+el.stackAction( "mixer", "mixer changes" );
+el.stackAction( "redirect", "redirection -->" );
+el.undo();
+</script>
+</body>
+</html>

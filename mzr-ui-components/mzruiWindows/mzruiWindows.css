@@ -1,0 +1,12 @@
+mzrui-windows {
+	--mzruiWindows-overflow: hidden;
+	display: block;
+	height: 100%;
+	position: relative;
+	overflow: var( --mzruiWindows-overflow );
+	scroll-behavior: smooth;
+}
+
+mzrui-windows.mzruiWindows-maximized {
+	overflow: hidden;
+}

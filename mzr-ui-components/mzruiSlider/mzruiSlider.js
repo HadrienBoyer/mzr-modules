@@ -1,0 +1,275 @@
+"use strict";
+
+class mzruiSlider extends HTMLElement {
+	#min = 0;
+	#max = 100;
+	#scrollStep = 1;
+	#wheelChange = false;
+	#mousemoveSize = 0;
+	#strokeWidth = 4;
+	#previousval = "";
+	#circ = false;
+	#axeX = false;
+	#locked = false;
+	#connected = false;
+	#pxval = 0;
+	#pxmoved = 0;
+	#svgLineLen = 0;
+	#dispatch = MZRUI.$dispatchEvent.bind( null, this, "mzruiSlider" );
+	#children = MZRUI.$getTemplate( "mzrui-slider" );
+	#elements = MZRUI.$findElements( this.#children, {
+		input: ".mzruiSlider-input",
+		line: ".mzruiSlider-line",
+		lineColor: ".mzruiSlider-lineColor",
+		svg: ".mzruiSlider-svg",
+		svgLine: ".mzruiSlider-svgLine",
+		svgLineColor: ".mzruiSlider-svgLineColor",
+	} );
+	static focused = null;
+
+	constructor() {
+		super();
+
+		this.value = "";
+		this.width =
+		this.height = 0;
+		Object.seal( this );
+
+		this.onwheel = this.#onwheel.bind( this );
+		this.onmouseup = this.#onmouseup.bind( this );
+		this.onmousedown = this.#onmousedown.bind( this );
+		this.onmousemove = this.#onmousemove.bind( this );
+		this.onmouseleave = this.#onmouseleave.bind( this );
+	}
+
+	// .........................................................................
+	connectedCallback() {
+		if ( this.#children ) {
+			const brc = this.getBoundingClientRect();
+
+			this.append( ...this.#children );
+			this.width = brc.width;
+			this.height = brc.height;
+			this.#children = null;
+			this.#connected = true;
+			this.#setSVGcirc();
+			this.#updateVal();
+		}
+	}
+	static get observedAttributes() {
+		return [ "value", "type", "min", "max", "step", "scroll-step", "wheel-change", "mousemove-size", "stroke-width" ];
+	}
+	attributeChangedCallback( prop, prev, val ) {
+		if ( prev !== val ) {
+			let updateVal;
+
+			switch ( prop ) {
+				case "value":
+					this.setValue( val );
+					break;
+				case "type":
+					this.#setType( val );
+					this.#setSVGcirc();
+					updateVal = true;
+					break;
+				case "min":
+					this.#elements.input.min = this.#min = +val;
+					updateVal = true;
+					break;
+				case "max":
+					this.#elements.input.max = this.#max = +val;
+					updateVal = true;
+					break;
+				case "step":
+					this.#elements.input.step = +val;
+					updateVal = true;
+					break;
+				case "scroll-step":
+					this.#scrollStep = +val;
+					break;
+				case "wheel-change":
+					this.#wheelChange = typeof val === "string";
+					break;
+				case "mousemove-size":
+					this.#mousemoveSize = +val;
+					break;
+				case "stroke-width":
+					this.#strokeWidth = +val;
+					this.#setSVGcirc();
+					break;
+			}
+			if ( updateVal ) {
+				this.#previousval = this.#getInputVal();
+				this.#updateVal();
+			}
+		}
+	}
+
+	// .........................................................................
+	static pointerLockChange() {
+		const el = document.pointerLockElement;
+
+		if ( el ) {
+			if ( el.nodeName === "MZRUI-SLIDER" ) {
+				el.#locked = true;
+				mzruiSlider.focused = el;
+			}
+		} else if ( mzruiSlider.focused ) {
+			mzruiSlider.focused.#onmouseup();
+		}
+	}
+	setValue( val, bymouse ) {
+		if ( !this.#locked || bymouse ) {
+			const prevVal = this.#getInputVal();
+			const newVal = ( this.#elements.input.value = val, this.#getInputVal() );
+
+			if ( newVal !== prevVal ) {
+				this.#updateVal();
+				if ( bymouse ) {
+					this.#dispatch( "input", +newVal );
+				}
+			}
+			if ( !bymouse ) {
+				this.#previousval = newVal;
+			}
+		}
+	}
+
+	// .........................................................................
+	#setType( type ) {
+		const st = this.#elements.lineColor.style;
+		const circ = type === "circular";
+		const axeX = type === "linear-x";
+
+		this.#circ = circ;
+		this.#axeX = axeX;
+		this.classList.toggle( "mzruiSlider-circular", circ );
+		this.classList.toggle( "mzruiSlider-linear", !circ );
+		if ( !circ ) {
+			if ( axeX ) {
+				st.left =
+				st.width = "";
+				st.top = "0";
+				st.height = "100%";
+			} else {
+				st.top =
+				st.height = "";
+				st.left = "0";
+				st.width = "100%";
+			}
+		}
+	}
+	#setSVGcirc() {
+		if ( this.#circ && this.width && this.height ) {
+			const size = Math.min( this.width, this.height );
+			const cx = size / 2;
+			const r = ~~( ( size - this.#strokeWidth ) / 2 );
+
+			MZRUI.$setAttribute( this.#elements.svg, "viewBox", `0 0 ${ size } ${ size }` );
+			MZRUI.$setAttribute( this.#elements.svgLine, { r, cx, cy: cx, } );
+			MZRUI.$setAttribute( this.#elements.svgLineColor, { r, cx, cy: cx, } );
+			this.#elements.svgLine.style.strokeWidth =
+			this.#elements.svgLineColor.style.strokeWidth = this.#strokeWidth;
+			this.#svgLineLen = r * 2 * Math.PI;
+		}
+	}
+	#getInputVal() {
+		const val = this.#elements.input.value;
+
+		return Math.abs( +val ) < .000001 ? "0" : val;
+	}
+	#getRange() {
+		return this.#max - this.#min;
+	}
+	#getMousemoveSize() {
+		return this.#mousemoveSize || (
+			this.#circ
+				? this.#svgLineLen
+				: this.#axeX
+					? this.#elements.line.getBoundingClientRect().width
+					: this.#elements.line.getBoundingClientRect().height
+		);
+	}
+	#updateVal() {
+		this.value = +this.#getInputVal();
+		if ( this.#connected ) {
+			const len = this.#getRange();
+			const prcval = ( this.value - this.#min ) / len;
+			const prcstart = -this.#min / len;
+			const prclen = Math.abs( prcval - prcstart );
+			const prcmin = Math.min( prcval, prcstart );
+
+			if ( this.#circ ) {
+				const line = this.#elements.svgLineColor.style;
+
+				line.transform = `rotate(${ 90 + prcmin * 360 }deg)`;
+				line.strokeDasharray = `${ prclen * this.#svgLineLen }, 999999`;
+			} else {
+				const line = this.#elements.lineColor.style;
+
+				if ( this.#axeX ) {
+					line.left = `${ prcmin * 100 }%`;
+					line.width = `${ prclen * 100 }%`;
+				} else {
+					line.bottom = `${ prcmin * 100 }%`;
+					line.height = `${ prclen * 100 }%`;
+				}
+			}
+		}
+	}
+	#onchange() {
+		const val = this.#getInputVal();
+
+		if ( this.#previousval !== val ) {
+			MZRUI.$setAttribute( this, "value", val );
+			this.#dispatch( "change", +val );
+			this.#previousval = val;
+		}
+	}
+
+	// .........................................................................
+	#onwheel( e ) {
+		if ( !MZRUI.$hasAttribute( this, "disabled" ) && this.#wheelChange ) {
+			const d = e.deltaY > 0 ? -1 : 1;
+
+			this.setValue( +this.#getInputVal() + this.#scrollStep * d, true );
+			return false;
+		}
+	}
+	#onmousedown() {
+		if ( !MZRUI.$hasAttribute( this, "disabled" ) ) {
+			this.#dispatch( "inputStart", this.value );
+			this.#pxval = this.#getRange() / this.#getMousemoveSize();
+			this.#pxmoved = 0;
+			this.requestPointerLock();
+		}
+	}
+	#onmousemove( e ) {
+		if ( this.#locked ) {
+			const bound = this.#getRange() / 5;
+			const mov = this.#circ || !this.#axeX ? -e.movementY : e.movementX;
+			const val = +this.#previousval + ( this.#pxmoved + mov ) * this.#pxval;
+
+			if ( this.#min - bound < val && val < this.#max + bound ) {
+				this.#pxmoved += mov;
+			}
+			this.setValue( val, true );
+		}
+	}
+	#onmouseup() {
+		if ( this.#locked ) {
+			document.exitPointerLock();
+			this.#locked = false;
+			this.#onchange();
+			this.#dispatch( "inputEnd", this.value );
+		}
+	}
+	#onmouseleave() {
+		this.#onchange();
+	}
+}
+
+Object.seal( mzruiSlider );
+customElements.define( "mzrui-slider", mzruiSlider );
+
+document.addEventListener( "pointerlockchange", mzruiSlider.pointerLockChange );

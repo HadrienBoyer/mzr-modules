@@ -1,0 +1,20 @@
+.mzruiDAW-popup-shortcuts {
+	width: 500px;
+}
+.mzruiDAW-popup-shortcuts .mzruiPopup-row:nth-child( even ) {
+	background-color: rgba( 255, 255, 255, .05 );
+}
+.mzruiDAW-popup-shortcuts kbd {
+	display: inline-block;
+	position: relative;
+	border-radius: 4px;
+	border-bottom: 3px solid #333;
+	padding: 4px 6px;
+	color: #fff;
+	white-space: nowrap;
+	background-color: #444;
+}
+.mzruiDAW-popup-shortcuts .mzruiIcon[ data-icon="plus" ] {
+	margin: 0 8px;
+	font-size: 10px;
+}

@@ -1,0 +1,81 @@
+.mzruiDAW-areaUser {
+	grid-area: areaUser;
+}
+.mzruiDAW-title {
+	align-self: center;
+	margin-right: var( --gap );
+	font-size: 28px;
+	font-family: var( --mzrui-font-title );
+	user-select: none;
+}
+.mzruiDAW-btn[ data-action="profile" ] {
+	width: 32px;
+	border: 2px solid #222;
+	box-sizing: border-box;
+	background-size: cover;
+	background-color: #fff4;
+}
+.mzruiDAW-btn[ data-action="login" ] {
+	font-size: 26px;
+}
+.mzruiDAW-btn[ data-action="login" ],
+.mzruiDAW-btn[ data-action="logout" ] {
+	opacity: .7;
+}
+mzrui-daw[ logged ] .mzruiDAW-btn[ data-action="login" ],
+mzrui-daw:not( [ logged ] ) .mzruiDAW-btn[ data-action="logout" ],
+mzrui-daw:not( [ logged ] ) .mzruiDAW-btn[ data-action="profile" ] {
+	display: none;
+}
+.mzruiDAW-cmps {
+	display: flex;
+}
+.mzruiDAW-btn[ data-action="cmps" ] {
+	--mzrui-color: var( --mzruiDAW-cmps-color );
+}
+
+/* .......................................................................... */
+.mzruiDAW-cmps .mzruiDAW-dropdown {
+	left: var( --gap );
+	width: 480px;
+	grid-template-columns: 1fr 1fr;
+	box-shadow: 2px var( --mzruiDAW-dropdown-shadow );
+}
+.mzruiDAW-dropdown-list[ data-list="cloud" ] {
+	border-left: 2px solid #0001;
+}
+mzrui-daw:not( [ logged ] ) .mzruiDAW-dropdown-list[ data-list="cloud" ] .mzruiDAW-dropdown-placeholder span:first-child,
+mzrui-daw[ logged ]         .mzruiDAW-dropdown-list[ data-list="cloud" ] .mzruiDAW-dropdown-placeholder span:last-child {
+	display: none;
+}
+.mzruiDAW-cmps-btn {
+	height: 20px;
+	padding: 0 8px;
+	margin-left: 8px;
+	border: 0;
+	outline: 0;
+	border-radius: 3px;
+	color: var( --mzruiDAW-cmps-btn-newCmp-color );
+	font-size: 12px;
+	font-weight: bold;
+	font-family: inherit;
+	line-height: 1;
+	background-color: var( --mzruiDAW-cmps-btn-bg );
+	cursor: pointer;
+	transition: filter .2s;
+}
+.mzruiDAW-cmps-btn:focus,
+.mzruiDAW-cmps-btn:hover {
+	filter: brightness( 1.1 );
+}
+.mzruiDAW-cmps-btn-icon,
+.mzruiDAW-cmps-btn-text {
+	pointer-events: none;
+}
+.mzruiDAW-cmps-btn-text {
+	margin-left: 4px;
+}
+mzrui-daw:not( [ logged ] ) .mzruiDAW-cmps-btn[ data-action="cloudNewCmp" ] {
+	color: #888;
+	pointer-events: none;
+}

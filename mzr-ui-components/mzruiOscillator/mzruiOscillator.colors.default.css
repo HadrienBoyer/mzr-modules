@@ -1,0 +1,15 @@
+mzrui-oscillator {
+	--mzruiOscillator-txt: #fff;
+	--mzruiOscillator-txt-low: #fff7;
+	--mzruiOscillator-bg: #666;
+	--mzruiOscillator-pan: var( --mzrui-col-pan );
+	--mzruiOscillator-gain: var( --mzrui-col-gain );
+	--mzruiOscillator-pan-a: #faa;
+	--mzruiOscillator-pan-b: #aaf;
+	--mzruiOscillator-detune: var( --mzrui-col-detune );
+	--mzruiOscillator-slider-bg: #0003;
+	--mzruiOscillator-grip-bg: #0002;
+	--mzruiOscillator-wave-bg: #0006;
+	--mzruiOscillator-wave-option: #444;
+	--mzruiOscillator-wave-optionNative: #333;
+}

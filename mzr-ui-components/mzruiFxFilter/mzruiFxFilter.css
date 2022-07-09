@@ -1,0 +1,119 @@
+mzrui-fx-filter {
+	display: grid;
+	box-sizing: border-box;
+	height: 100%;
+	color: inherit;
+	padding: 8px;
+	grid-gap: 8px;
+	grid-template:
+		"type graph     gain Q     " 1fr
+		"type graph     gain detune" 1fr
+		".    frequency .    .     " 8px
+		/32px 1fr       8px  50px;
+	background-color: #666;
+	--mzruiSlider-lineBgColor: var( --mzruiFxFilter-inputBg );
+}
+
+/* .......................................................................... */
+.mzruiFxFilter-area {
+	display: flex;
+	flex-direction: column;
+}
+.mzruiFxFilter-area-label {
+	align-self: center;
+	height: 20px;
+	font-size: 12px;
+	opacity: .5;
+}
+.mzruiFxFilter-area-content {
+	flex: 1;
+	position: relative;
+}
+
+/* .......................................................................... */
+.mzruiFxFilter-areaType {
+	grid-area: type;
+}
+.mzruiFxFilter-areaGraph {
+	grid-area: graph;
+}
+.mzruiFxFilter-areaGain {
+	grid-area: gain;
+	--mzruiSlider-lineColor: var( --mzruiFxFilter-gain );
+}
+.mzruiFxFilter-areaQ {
+	grid-area: Q;
+	--mzruiSlider-lineColor: var( --mzruiFxFilter-Q );
+}
+.mzruiFxFilter-areaDetune {
+	grid-area: detune;
+	--mzruiSlider-lineColor: var( --mzruiFxFilter-detune );
+}
+.mzruiFxFilter-areaFrequency {
+	grid-area: frequency;
+	--mzruiSlider-lineColor: var( --mzruiFxFilter-frequency );
+}
+.mzruiFxFilter-areaQ mzrui-slider,
+.mzruiFxFilter-areaDetune mzrui-slider {
+	min-height: 40px;
+}
+
+/* .......................................................................... */
+.mzruiFxFilter-areaGain .mzruiSlider-eventCatcher,
+.mzruiFxFilter-areaFrequency .mzruiSlider-eventCatcher {
+	inset: -8px;
+}
+
+/* .......................................................................... */
+.mzruiFxFilter-areaGraph .mzruiFxFilter-area-label {
+	align-self: flex-start;
+}
+.mzruiFxFilter-areaGraph .mzruiFxFilter-area-content {
+	border-radius: 4px;
+	background-color: rgba( 0, 0, 0, .5 );
+}
+mzrui-fx-filter .mzruiCurves-curve {
+	color: currentColor;
+	opacity: .25;
+}
+.mzruiFxFilter-enable .mzruiCurves-curve {
+	color: var( --mzruiFxFilter-frequency );
+	opacity: 1;
+}
+
+/* .......................................................................... */
+.mzruiFxFilter-areaType .mzruiFxFilter-area-content {
+	display: flex;
+	overflow: hidden;
+	border-radius: 4px;
+	flex-direction: column;
+}
+.mzruiFxFilter-areaType-btn {
+	position: relative;
+	flex: 1;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	cursor: pointer;
+	stroke: var( --mzruiFxFilter-gain );
+	stroke-width: 1.5px;
+	background-color: var( --mzruiFxFilter-inputBg );
+}
+.mzruiFxFilter-areaType-btn:hover,
+.mzruiFxFilter-areaType-btn:focus {
+	stroke-width: 2px;
+}
+.mzruiFxFilter-areaType-btnSelected {
+	stroke: #222;
+	background-color: var( --mzruiFxFilter-gain );
+}
+.mzruiFxFilter-areaType-btn svg {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	fill: transparent;
+	stroke: inherit;
+	stroke-width: inherit;
+	pointer-events: none;
+}

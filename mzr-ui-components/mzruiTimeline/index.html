@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+<link rel="shortcut icon" href="/assets/favicon.png"/>
+<link rel="stylesheet" href="/assets/fonts/fonts.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzrui.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/test-assets/test.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiTimeline/mzruiTimeline.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiTimeline/mzruiTimeline.css"/>
+
+<!-- ....................................................................... -->
+<style>
+body {
+	--test-content-w: 400px;
+	--test-content-resize: horizontal;
+}
+#wrapOut {
+	overflow: auto;
+	margin-bottom: 16px;
+}
+#wrapIn {
+	width: 10000px;
+	height: 32px;
+}
+.prop {
+	display: flex;
+	align-items: center;
+}
+.prop span,
+.prop b {
+	margin-left: 1ch;
+}
+</style>
+</head>
+<body>
+
+<!-- ....................................................................... -->
+<div id="TEST">
+	<div id="wrapOut">
+		<div id="wrapIn">
+			<mzrui-timeline step="1" pxperbeat="80" loop="1.25-3.75" currenttime="1.25" timedivision="4/4"></mzrui-timeline>
+		</div>
+	</div>
+</div>
+<div id="TEST-CTRLS">
+	<div class="prop">
+		<input id="currentTimePreview" type="range" value="0" min="0" max="4" step=".001" />
+		<span>currentTime preview</span>
+		<b>0</b>
+	</div>
+	<div class="prop">
+		<input id="currentTime" type="range" value="1.25" min="0" max="4" step=".001" />
+		<span>currentTime</span>
+		<b>1.25</b>
+	</div>
+	<div class="prop">
+		<input id="pxPerbeat" type="range" value="80" min="2" max="128"/>
+		<span>px per beat</span>
+		<b>80</b>
+	</div>
+	<div class="prop">
+		<input id="beatsPerMeasure" type="range" value="4" min="1" max="16"/>
+		<span>beats per measure</span>
+		<b>4</b>
+	</div>
+	<div class="prop">
+		<input id="stepsPerBeat" type="range" value="4" min="1" max="16"/>
+		<span>steps per beat</span>
+		<b>4</b>
+	</div>
+</div>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzrui.js"></script>
+<script src="/mzr-ui-components/test-assets/test.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiTimeline/mzruiTimeline.html.js"></script>
+<script src="/mzr-ui-components/mzruiTimeline/mzruiTimeline.js"></script>
+
+<!-- ....................................................................... -->
+<script>
+const elTimeline = document.querySelector( "mzrui-timeline" );
+const inpTPr = document.querySelector( "#currentTimePreview" );
+const inpTim = document.querySelector( "#currentTime" );
+const inpPBB = document.querySelector( "#pxPerbeat" );
+const inpBPM = document.querySelector( "#beatsPerMeasure" );
+const inpSPB = document.querySelector( "#stepsPerBeat" );
+
+inpTPr.oninput = e => MZRUI.$setAttribute( elTimeline, "currenttime-preview", inpTPr.value );
+inpTim.oninput = e => MZRUI.$setAttribute( elTimeline, "currenttime", inpTim.value );
+inpPBB.oninput = e => MZRUI.$setAttribute( elTimeline, "pxperbeat", inpPBB.value );
+inpBPM.oninput =
+inpSPB.oninput = e => MZRUI.$setAttribute( elTimeline, "timedivision", `${ inpBPM.value }/${ inpSPB.value }` );
+document.body.oninput = e => e.target.nextElementSibling.nextElementSibling.textContent = e.target.value;
+</script>
+</body>
+</html>

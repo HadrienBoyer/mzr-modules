@@ -1,0 +1,166 @@
+:root {
+	--mzruiTimeline-numbering: 1;
+}
+
+mzrui-timeline {
+	position: relative;
+	display: block;
+	height: 100%;
+	color: var( --mzruiTimeline-color );
+	background-color: var( --mzruiTimeline-bg );
+	--mzruiTimeline-beats-offset: 0;
+	--mzruiTimeline-beats-incr: 1;
+	--mzruiTimeline-beats-per-measure: 4;
+}
+
+/* .......................................................................... */
+.mzruiTimeline-steps,
+.mzruiTimeline-beats {
+	position: absolute;
+	inset: calc( 50% - 1px ) 0 auto;
+	height: 2px;
+	pointer-events: none;
+	background-repeat: no-repeat;
+}
+.mzruiTimeline-beats {
+	top: calc( 50% - 2px );
+	height: 4px;
+	margin-left: 1px;
+	background-image: repeating-linear-gradient(
+		90deg,
+		transparent 0,
+		transparent calc( 1em - 2px ),
+		currentColor calc( 1em - 2px ),
+		currentColor calc( 1em ),
+		transparent calc( 1em )
+	);
+}
+
+/* .......................................................................... */
+.mzruiTimeline-measures {
+	display: flex;
+	height: 100%;
+	counter-reset: beat calc( var( --mzruiTimeline-beats-offset ) - var( --mzruiTimeline-beats-incr ) + var( --mzruiTimeline-numbering ) );
+	pointer-events: none;
+}
+.mzruiTimeline-measure {
+	counter-increment: beat var( --mzruiTimeline-beats-incr );
+	display: inline-block;
+	margin-left: calc( var( --mzruiTimeline-beats-incr ) * var( --mzruiTimeline-beats-per-measure ) * 1em );
+}
+.mzruiTimeline-measure:first-child {
+	margin-left: calc( var( --mzruiTimeline-beats-offset ) * var( --mzruiTimeline-beats-per-measure ) * 1em );
+}
+.mzruiTimeline-measure::before {
+	content: "";
+	position: absolute;
+	margin-left: -2px;
+	width: 4px;
+	height: 100%;
+	background-color: var( --mzruiTimeline-bg );
+}
+.mzruiTimeline-measure::after {
+	display: flex;
+	content: counter( beat );
+	position: absolute;
+	inset: 0 auto;
+	width: 52px;
+	margin-left: -26px;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	font-family: var( --mzrui-font-number );
+	opacity: var( --mzruiTimeline-measures-opacity, 0 );
+}
+.mzruiTimeline-measureBig::after {
+	font-weight: bold;
+	opacity: 1;
+}
+
+/* .......................................................................... */
+.mzruiTimeline-loopLine,
+.mzruiTimeline-timeLine {
+	position: absolute;
+	inset: 0 0 50%;
+	transition: .2s background-color;
+}
+.mzruiTimeline-loopLine:hover,
+.mzruiTimeline-timeLine:hover,
+.mzruiTimeline-draggingLoopBody .mzruiTimeline-loopLine,
+.mzruiTimeline-draggingLoopHandleA .mzruiTimeline-loopLine,
+.mzruiTimeline-draggingLoopHandleB .mzruiTimeline-loopLine,
+.mzruiTimeline-draggingTime .mzruiTimeline-timeLine {
+	background-color: var( --mzruiTimeline-lines-bg );
+}
+.mzruiTimeline-timeLine {
+	top: 50%;
+	bottom: 0;
+}
+
+/* .......................................................................... */
+.mzruiTimeline-cursor,
+.mzruiTimeline-cursorPreview {
+	position: absolute;
+	margin-left: -8px;
+	bottom: 1px;
+	fill: var( --mzruiTimeline-cursor-fill );
+	stroke: var( --mzruiTimeline-cursor-fill );
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	pointer-events: none;
+}
+.mzruiTimeline-cursorPreview {
+	opacity: .5;
+}
+
+/* .......................................................................... */
+.mzruiTimeline-loop {
+	position: absolute;
+	height: 6px;
+	transition: .1s;
+	transition-property: opacity, visibility;
+	opacity: 0;
+	visibility: hidden;
+}
+.mzruiTimeline-looping .mzruiTimeline-loop {
+	opacity: 1;
+	visibility: visible;
+}
+.mzruiTimeline-loopBody {
+	height: 100%;
+	transition: filter .2s;
+	background-color: var( --mzruiTimeline-loop-bg );
+}
+.mzruiTimeline-loopBody:hover,
+.mzruiTimeline-draggingLoopBody .mzruiTimeline-loopBody {
+	filter: brightness( 1.2 );
+}
+
+/* .......................................................................... */
+.mzruiTimeline-loopHandle {
+	position: absolute;
+	inset: 0 auto -6px;
+	width: 25%;
+	min-width: 7px;
+	max-width: 12px;
+}
+.mzruiTimeline-loopHandleA { left: -5px; }
+.mzruiTimeline-loopHandleB { right: -5px; }
+
+/* .......................................................................... */
+.mzruiTimeline-loopBorder {
+	position: absolute;
+	inset: 0 auto;
+	width: 2px;
+	transition: .2s;
+	transition-property: bottom, background-color;
+	pointer-events: none;
+}
+.mzruiTimeline-loopBorderA { left: 0; }
+.mzruiTimeline-loopBorderB { right: 0; }
+.mzruiTimeline-loopHandle:hover + .mzruiTimeline-loopBorder,
+.mzruiTimeline-draggingLoopHandleA .mzruiTimeline-loopBorderA,
+.mzruiTimeline-draggingLoopHandleB .mzruiTimeline-loopBorderB {
+	bottom: -3px;
+	background-color: var( --mzruiTimeline-loopBorder-bg );
+}

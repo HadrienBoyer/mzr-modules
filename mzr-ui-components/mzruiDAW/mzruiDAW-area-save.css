@@ -1,0 +1,75 @@
+.mzruiDAW-areaSave {
+	grid-area: areaSave;
+	display: flex;
+	width: 260px;
+	background-color: var( --mzruiDAW-playPauseStop-bg );
+}
+.mzruiDAW-currCmp-saveBtn {
+	color: #fff;
+	background-color: var( --mzruiDAW-save-bg );
+	transition: .2s;
+	transition-property: margin-left, color, background-color, visibility;
+}
+mzrui-daw[ saved ] .mzruiDAW-currCmp-saveBtn {
+	visibility: hidden;
+	margin-left: -32px;
+}
+.mzruiDAW-currCmp-saveBtn:hover {
+	color: var( --mzruiDAW-save-bg );
+	background-color: #fff;
+}
+.mzruiDAW-currCmp-editBtn {
+	flex: 1;
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	justify-content: start;
+	font-family: inherit;
+	padding: 0 4px;
+	font-size: 14px;
+}
+.mzruiDAW-currCmp-localIcon {
+	display: none;
+	margin-right: .3em;
+	pointer-events: none;
+}
+mzrui-daw[ saved ] .mzruiDAW-currCmp-localIcon {
+	display: inline-block;
+}
+.mzruiDAW-currCmp-name {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+	padding-right: .4ch;
+	pointer-events: none;
+}
+mzrui-daw:not( [ saved ] ) .mzruiDAW-currCmp-name::before {
+	content: "*";
+}
+.mzruiDAW-currCmp-name:empty::after {
+	content: "Untitled";
+	font-style: italic;
+	padding-right: 1px;
+	opacity: .8;
+}
+.mzruiDAW-currCmp-editIcon {
+	width: 0;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	pointer-events: none;
+	transition: .1s;
+	transition-property: width, margin-left;
+}
+.mzruiDAW-currCmp-editBtn:hover .mzruiDAW-currCmp-editIcon {
+	width: 1.4ch;
+	margin-left: 4px;
+}
+.mzruiDAW-currCmp-dur {
+	pointer-events: none;
+}
+.mzruiDAW-currCmp-dur::before {
+	content: "·";
+	margin: 4px;
+}

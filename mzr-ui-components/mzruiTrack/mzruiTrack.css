@@ -1,0 +1,97 @@
+mzrui-track {
+	display: flex;
+	height: var( --mzruiTimewindow-lineH );
+	background-color: hsl(
+		var( --mzruiTrack-hsl-h ),
+		var( --mzruiTrack-hsl-s ),
+		calc( var( --mzruiTrack-hsl-l ) + var( --rel-l, 0% ) )
+	);
+}
+mzrui-track,
+.mzruiTrack-row,
+.mzruiTrack-toggle::before {
+	transition: .2s background-color;
+}
+mzrui-track:nth-child( even ) {
+	--rel-l: -1.7%;
+}
+mzrui-track.mzrui-mute {
+	--rel-l: -5%;
+	--mzruiTrack-toggle-bg: var( --mzruiTrack-toggleOff-bg );
+}
+mzrui-track.mzrui-mute:nth-child( even ) {
+	--rel-l: -5.5%;
+}
+
+/* .......................................................................... */
+.mzruiTrack-row {
+	position: relative;
+	z-index: 0;
+	height: var( --mzruiTimewindow-lineH );
+	background-color: rgba( 0, 0, 0, var( --rel-a, 0 ) );
+}
+.mzruiTrack-row:nth-child( even ) {
+	--rel-a: .06;
+}
+.mzruiTrack-row.mzrui-mute {
+	--rel-a: .25;
+}
+.mzruiTrack-row.mzrui-mute:nth-child( even ) {
+	--rel-a: .29;
+}
+.mzruiTrack-row > div {
+	position: absolute;
+	inset: 0;
+	font-size: var( --mzruiTimewindow-pxperbeat );
+}
+
+/* .......................................................................... */
+.mzruiTrack-toggle {
+	cursor: pointer;
+	display: flex;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	min-width: 24px;
+	align-items: center;
+	justify-content: center;
+	color: var( --mzruiTrack-toggle-bg );
+	font-size: 8px;
+	background: none;
+}
+.mzruiTrack-nameWrap {
+	position: relative;
+	flex: 1;
+}
+.mzruiTrack-name {
+	box-sizing: border-box;
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	padding-right: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: inherit;
+	text-overflow: ellipsis;
+	color: var( --mzruiTrack-color );
+	cursor: default;
+	background: none;
+	user-select: none;
+}
+.mzrui-mute .mzruiTrack-name {
+	opacity: .5;
+}
+.mzruiTrack-name:focus {
+	font-weight: normal;
+}
+.mzruiTrack-name::placeholder {
+	color: inherit;
+	font-style: italic;
+	font-weight: normal;
+	opacity: .3;
+}
+.mzruiTrack-name:focus::placeholder {
+	color: transparent;
+}

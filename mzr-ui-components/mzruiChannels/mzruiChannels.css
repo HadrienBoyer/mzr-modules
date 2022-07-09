@@ -1,0 +1,64 @@
+mzrui-channels {
+	display: flex;
+	height: 100%;
+	position: relative;
+	color: var( --mzruiChannels-color );
+	background-color: var( --mzruiChannels-bg );
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* .......................................................................... */
+.mzruiChannels-panMain {
+	position: absolute;
+	inset: 0 auto 0 0;
+}
+.mzruiChannels-panChannels {
+	position: absolute;
+	overflow: scroll;
+	inset: 0 0 0 calc( 52px + 6px );
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: min-content;
+	scrollbar-width: none;
+}
+.mzruiChannels-panChannels::-webkit-scrollbar {
+	display: none;
+}
+.mzruiChannels-panChannels::after {
+	order: 2147483647;
+	content: ".";
+	opacity: 0;
+	margin-left: 16px;
+}
+.mzruiChannels-panChannels mzrui-channel:nth-child( odd ) {
+	--mzruiChannel-bg: var( --mzruiChannel-bg2 );
+}
+
+/* .......................................................................... */
+.mzruiChannels-addChan {
+	position: relative;
+	order: 2147483646;
+	width: 52px;
+	border: 0;
+	padding: 0;
+	outline: 0;
+	font-size: 18px;
+	color: inherit;
+	cursor: pointer;
+	border-radius: 2px;
+	background: none;
+	opacity: .4;
+	transition: .2s opacity;
+}
+.mzruiChannels-addChan:focus,
+.mzruiChannels-addChan:hover {
+	opacity: .6;
+}
+.mzruiChannels-addChan::before {
+	content: "";
+	inset: 6px;
+	opacity: .4;
+	border: 2px dashed;
+	position: absolute;
+}

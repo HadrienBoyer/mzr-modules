@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+<link rel="shortcut icon" href="/assets/favicon.png"/>
+<link rel="stylesheet" href="/assets/fonts/fonts.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzrui.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiIcon/mzruiIcon.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/test-assets/test.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiDragshield/mzruiDragshield.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiBeatlines/mzruiBeatlines.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiTimeline/mzruiTimeline.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiTimeline/mzruiTimeline.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiTimewindow/mzruiTimewindow.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiTimewindow/mzruiTimewindow.css"/>
+
+<!-- ....................................................................... -->
+<style>
+body {
+	--test-content-w: 400px;
+	--test-content-h: 260px;
+}
+.mzruiTimewindow-line {
+	height: var( --mzruiTimewindow-lineH );
+}
+.mzruiTimewindow-lineIn {
+	box-sizing: border-box;
+	position: relative;
+	height: 100%;
+	font-size: var( --mzruiTimewindow-pxperbeat );
+	border-bottom: 1px solid #0004;
+}
+.mzruiTimewindow-lineItem {
+	position: absolute;
+	width: .25em;
+	height: 100%;
+	background-color: #ddfd;
+}
+.mzruiTimewindow-contentDown { background-color: #5c7; }
+.mzruiTimewindow-panelContentDown { background-color: #38e; }
+
+.myRow {
+	box-sizing: border-box;
+	height: var( --mzruiTimewindow-lineH );
+	line-height: var( --mzruiTimewindow-lineH );
+	padding-left: 1ch;
+	color: #fff5;
+	font-family: monospace;
+	border-bottom: 1px solid #0004;
+	cursor: default;
+}
+</style>
+</head>
+<body>
+
+<!-- ....................................................................... -->
+<div id="TEST">
+	<mzrui-timewindow downpanel timedivision="4/4" pxperbeat="60"></mzrui-timewindow>
+</div>
+<div id="TEST-CTRLS">
+	<label>
+		<input id="timeDisabled" type="checkbox" name="disabled"/>
+		<span>disabled</span>
+	</label>
+</div>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzrui.js"></script>
+<script src="/mzr-ui-components/test-assets/test.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiDragshield/mzruiDragshield.js"></script>
+<script src="/mzr-ui-components/mzruiBeatlines/mzruiBeatlines.js"></script>
+<script src="/mzr-ui-components/mzruiTimeline/mzruiTimeline.html.js"></script>
+<script src="/mzr-ui-components/mzruiTimeline/mzruiTimeline.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiTimewindow/mzruiTimewindow.html.js"></script>
+<script src="/mzr-ui-components/mzruiTimewindow/mzruiTimewindow.js"></script>
+
+<!-- ....................................................................... -->
+<script>
+const win = document.querySelector( "mzrui-timewindow" );
+const tracks = [];
+const rows = [];
+
+document.querySelector( "#timeDisabled" ).onchange = e => {
+	MZRUI.$setAttribute( win, "disabled", e.target.checked );
+};
+for ( let i = 0; i < 10; ++i ) {
+	tracks.push( MZRUI.$createElement( "div", { class: "myRow" }, `track ${ i }` ) );
+	rows.push( MZRUI.$createElement( "div", { class: "myRow" }, `row ${ i }` ) );
+}
+document.querySelector( ".mzruiTimewindow-panelContent" ).append( ...tracks );
+document.querySelector( ".mzruiTimewindow-rows" ).append( ...rows );
+</script>
+</body>
+</html>

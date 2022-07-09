@@ -1,0 +1,60 @@
+.mzruiDAW-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	padding: 0;
+	outline: 0;
+	color: inherit;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 1;
+	text-decoration: none;
+	border-radius: var( --radius );
+	background: none;
+	transition: .2s;
+	transition-property: color, opacity, background-color;
+	user-select: none;
+}
+.mzruiDAW-btn.mzruiIcon {
+	width: 32px;
+}
+.mzruiDAW-btn:not( .mzruiDAW-btnColor ):hover {
+	color: #fff;
+	opacity: 1;
+}
+
+.mzruiDAW-btnBg {
+	background-color: var( --mzruiDAW-btn-bg );
+}
+.mzruiDAW-btnBg:hover {
+	background-color: #fff3;
+}
+
+.mzruiDAW-btnColor {
+	color: var( --mzrui-color );
+}
+.mzruiDAW-btnColor:hover {
+	color: var( --mzruiDAW-bg );
+	background-color: var( --mzrui-color );
+}
+
+.mzruiDAW-btnBig {
+	font-size: 18px;
+}
+
+.mzruiDAW-btns {
+	display: flex;
+	border-radius: var( --radius );
+}
+.mzruiDAW-btns .mzruiDAW-btn:first-child {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.mzruiDAW-btns .mzruiDAW-btn:last-child {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.mzruiDAW-btns .mzruiDAW-btn:not( :first-child ):not( :last-child ) {
+	border-radius: 0;
+}

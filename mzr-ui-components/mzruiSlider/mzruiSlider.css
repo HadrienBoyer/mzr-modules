@@ -1,0 +1,51 @@
+mzrui-slider {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	user-select: none;
+}
+
+mzrui-slider[ disabled ] {
+	cursor: not-allowed;
+	--mzruiSlider-lineColor: #fff;
+}
+mzrui-slider[ disabled ] .mzruiSlider-lineColor,
+mzrui-slider[ disabled ] .mzruiSlider-svgLineColor {
+	opacity: .25;
+}
+
+.mzruiSlider-line,
+.mzruiSlider-eventCatcher {
+	position: absolute;
+	inset: 0;
+}
+
+.mzruiSlider-input,
+.mzruiSlider-linear .mzruiSlider-svg,
+.mzruiSlider-circular .mzruiSlider-line {
+	display: none;
+}
+
+.mzruiSlider-line {
+	overflow: hidden;
+	border-radius: var( --mzruiSlider-lineRadius, 2px );
+	background-color: var( --mzruiSlider-lineBgColor, #000 );
+}
+.mzruiSlider-lineColor {
+	position: absolute;
+	background-color: var( --mzruiSlider-lineColor, #fff );
+}
+
+.mzruiSlider-svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.mzruiSlider-svgLine,
+.mzruiSlider-svgLineColor {
+	fill: none;
+	transform-origin: center;
+}
+.mzruiSlider-svgLine { stroke: var( --mzruiSlider-lineBgColor, #000 ); }
+.mzruiSlider-svgLineColor { stroke: var( --mzruiSlider-lineColor, #fff ); }

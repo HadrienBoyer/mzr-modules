@@ -1,0 +1,97 @@
+mzrui-slidergroup {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	z-index: 0;
+}
+.mzruiSliderGroup-slidersWrap {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+	scrollbar-width: none;
+}
+.mzruiSliderGroup-slidersWrap::-webkit-scrollbar {
+	display: none;
+}
+.mzruiSliderGroup-sliders {
+	position: absolute;
+	width: 1000000px;
+	height: 100%;
+	user-select: none;
+}
+
+/* slider */
+/* .......................................................................... */
+.mzruiSliderGroup-slider {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+.mzruiSliderGroup-slider::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: var( --mzruiSliderGroup-slider-width );
+	background-color: var( --mzruiSliderGroup-slider-bg );
+}
+.mzruiSliderGroup-slidersSelected .mzruiSliderGroup-slider:not( .mzruiSliderGroup-sliderSelected ) {
+	pointer-events: none;
+}
+.mzruiSliderGroup-sliderInner {
+	position: absolute;
+	width: var( --mzruiSliderGroup-slider-width );
+	color: var( --mzruiSliderGroup-slider-color );
+	background-color: currentColor;
+}
+.mzruiSliderGroup-sliderSelected .mzruiSliderGroup-sliderInner {
+	color: var( --mzruiSliderGroup-slider-color-selected );
+}
+.mzruiSliderGroup-sliderInner::after {
+	content: "";
+	position: absolute;
+	box-sizing: border-box;
+	width: 1000000px;
+	height: 100%;
+	border: 0 solid;
+	border-width: 1px 0 0;
+}
+.mzruiSliderGroup-sliderInnerDown::after {
+	border-width: 0 0 1px;
+}
+
+/* currentTime, loopA/B */
+/* .......................................................................... */
+.mzruiSliderGroup-loop,
+.mzruiSliderGroup-currentTime {
+	position: absolute;
+	z-index: 2147483647;
+	top: 0;
+	bottom: 0;
+	pointer-events: none;
+}
+.mzruiSliderGroup-defaultValue {
+	position: absolute;
+	left: 0;
+	right: 0;
+	border-top: 1px dotted var( --mzruiSliderGroup-defaultValue-color );
+	pointer-events: none;
+}
+.mzruiSliderGroup-currentTime {
+	width: 2px;
+	margin-left: -1px;
+	background-color: var( --mzruiSliderGroup-currentTime-color );
+}
+.mzruiSliderGroup-loop {
+	background-color: transparent;
+	transition: .2s background-color;
+}
+.mzruiSliderGroup-loopA { left: 0; }
+.mzruiSliderGroup-loopB { right: 0; }
+.mzruiSliderGroup-loopOn {
+	background-color: var( --mzruiSliderGroup-loop-color );
+}

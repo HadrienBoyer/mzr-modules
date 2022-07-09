@@ -1,0 +1,112 @@
+:root {
+	--mzruiFxDelay-bg: #666;
+}
+
+.mzruiFxDelay {
+	display: grid;
+	height: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+	user-select: none;
+	-webkit-user-select: none;
+	background-color: var( --mzruiFxDelay-bg );
+	--mzruiSlider-lineColor: #313bbf;
+	--mzruiSlider-lineBgColor: rgba( 0, 0, 0, .5 );
+}
+
+/* .......................................................................... */
+.mzruiFxDelay-echoes {
+	position: relative;
+	min-height: 80px;
+	color: #fff;
+	border-radius: 4px;
+	background-color: #333;
+}
+
+/* .......................................................................... */
+.mzruiFxDelay-echoes .mzruiDotline {
+	height: 100%;
+	color: inherit;
+	--mzruiDotline-dotBg: #333;
+	--mzruiDotline-dotSize: 8px;
+	--mzruiDotline-dotSizeHover: 14px;
+}
+.mzruiFxDelay-echoes .mzruiDotline-dot {
+	color: #fff;
+	cursor: pointer;
+}
+.mzruiFxDelay-echoes .mzruiDotline polyline {
+	stroke: #fff;
+	stroke-width: 2px;
+}
+.mzruiFxDelay-echoes .mzruiDotline::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 50%;
+	opacity: .2;
+	border-bottom: 1px dashed;
+}
+
+/* .......................................................................... */
+.mzruiFxDelay-echoes::after,
+.mzruiFxDelay-echoes::before {
+	position: absolute;
+	left: 6px;
+	font-size: 32px;
+	line-height: 0;
+	font-family: "Oswald";
+	pointer-events: none;
+	opacity: .1;
+}
+.mzruiFxDelay-echoes::before {
+	top: 20px;
+	content: "R";
+}
+.mzruiFxDelay-echoes::after {
+	bottom: 22px;
+	content: "L";
+}
+
+/* .......................................................................... */
+.mzruiFxDelay-echoesLink,
+.mzruiFxDelay-echoes .mzruiSlider {
+	position: absolute;
+	opacity: .2;
+	transition: opacity .2s;
+}
+.mzruiFxDelay-echoesLink:focus,
+.mzruiFxDelay-echoesLink:hover,
+.mzruiFxDelay-echoes .mzruiSlider:hover {
+	opacity: .5;
+}
+
+/* .......................................................................... */
+.mzruiFxDelay-echoes .mzruiSlider {
+	bottom: 8px;
+	right: 36px;
+	width: 48px;
+	height: 14px;
+	border-radius: 2px;
+	box-shadow: 0 0 0 2px #fff;
+	--mzruiSlider-lineRadius: 2px;
+	--mzruiSlider-lineColor: #fff;
+	--mzruiSlider-lineBgColor: #222;
+}
+.mzruiFxDelay-echoes .mzruiSlider .mzrui-line {
+	box-shadow: 0 0 0 2px #fff;
+}
+
+/* .......................................................................... */
+.mzruiFxDelay-echoesLink {
+	bottom: 6px;
+	right: 8px;
+	border: 0;
+	padding: 0;
+	color: inherit;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 18px;
+	background: none;
+}

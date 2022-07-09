@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+<link rel="shortcut icon" href="/assets/favicon.png"/>
+<link rel="stylesheet" href="/assets/fonts/fonts.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzrui.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiIcon/mzruiIcon.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/test-assets/test.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiBeatlines/mzruiBeatlines.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiPeriodicWave/mzruiPeriodicWave.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSlider/mzruiSlider.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiLFO/mzruiLFO.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiLFO/mzruiLFO.css"/>
+
+<!-- ....................................................................... -->
+<style>
+body {
+	--test-content-w: 400px;
+	--test-content-h: 150px;
+	--test-content-minh: 80px;
+}
+</style>
+</head>
+<body>
+
+<!-- ....................................................................... -->
+<div id="TEST">
+	<mzrui-lfo toggle timedivision="4/4" type="sine" delay="0" attack="1" speed="1" amp="1"></mzrui-lfo>
+</div>
+<div id="TEST-CTRLS">
+	<label>
+		<span>target</span>
+		<select id="lfoTarget">
+			<option value="gain">gain</option>
+			<option value="lowpass">lowpass</option>
+		</select>
+	</label>
+</div>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui--components/gsmzrPeriodicWaves/gsmzrPeriodicWaves.js"></script>
+<script src="/assets/gsmzrPeriodicWavesList-v1.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzrui.js"></script>
+<script src="/mzr-ui-components/test-assets/test.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiBeatlines/mzruiBeatlines.js"></script>
+<script src="/mzr-ui-components/mzruiPeriodicWave/mzruiPeriodicWave.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.html.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiLFO/mzruiLFO.html.js"></script>
+<script src="/mzr-ui-components/mzruiLFO/mzruiLFO.js"></script>
+
+<!-- ....................................................................... -->
+<script>
+const elLFO = document.querySelector( "mzrui-lfo" );
+const elLFOtarget = document.querySelector( "#lfoTarget" );
+const waves = gsmzrPeriodicWaves.loadWaves( gsmzrPeriodicWavesList );
+
+elLFOtarget.onchange = () => {
+	const t = elLFOtarget.value;
+
+	MZRUI.$setAttribute( elLFO, "target", t );
+	MZRUI.$setAttribute( elLFO, "lowpassfreq", t === "gain" ? null : .4 );
+};
+waves.forEach( ( w, name ) => mzruiPeriodicWave.addWave( name, w.real, w.imag ) );
+elLFO.updateWave();
+</script>
+</body>
+</html>

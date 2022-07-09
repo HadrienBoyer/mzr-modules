@@ -1,0 +1,72 @@
+.mzruiDAW-popup-about {
+	width: 450px;
+	text-align: center;
+}
+
+/* .......................................................................... */
+.mzruiDAW-popup-about > div {
+	margin-bottom: 16px;
+}
+.mzruiDAW-popup-about a {
+	color: #ccf;
+	font-weight: bold;
+}
+
+/* .......................................................................... */
+.mzruiDAW-popup-about-head {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	font-size: 18px;
+	gap: 4px;
+}
+.mzruiDAW-popup-about-title {
+	font: 32px var( --mzrui-font-title );
+}
+.mzruiDAW-popup-about-versionNum {
+	opacity: .8;
+	font-family: var( --mzrui-font-number );
+}
+.mzruiDAW-popup-about-versionCheck {
+	font-size: 11px;
+	font-weight: bold;
+	opacity: .4;
+	cursor: pointer;
+	transition: .2s opacity;
+}
+.mzruiDAW-popup-about-versionCheck:hover {
+	opacity: 1;
+}
+
+/* .......................................................................... */
+.mzruiDAW-popup-about-links {
+	display: flex;
+}
+.mzruiDAW-popup-about-links a {
+	flex: 1;
+	padding: 20px 0;
+	color: #fff;
+	font-size: 36px;
+	font-weight: normal;
+	opacity: .5;
+	transition: .4s;
+	transition-property: opacity;
+}
+.mzruiDAW-popup-about-links a:hover {
+	opacity: 1;
+}
+.mzruiDAW-popup-about-links a:hover::before {
+	top: -4px;
+	left: 4px;
+	text-shadow: -4px 4px 2px rgba( 0, 0, 0, .2 );
+}
+.mzruiDAW-popup-about-links a::before {
+	position: relative;
+	top: 0;
+	left: 0;
+	transition: .2s;
+	transition-property: top, left, text-shadow;
+}
+.mzruiDAW-popup-about-links:hover a:not( :hover ) {
+	opacity: .3;
+}

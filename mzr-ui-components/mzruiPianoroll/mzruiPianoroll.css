@@ -1,0 +1,70 @@
+mzrui-pianoroll {
+	display: flex;
+	height: 100%;
+	--mzruiDragline-dotSize: 10px;
+	--mzruiDragline-dotRad: 2px;
+	--mzruiDragline-lineSize: 3px;
+}
+mzrui-pianoroll:focus {
+	outline: 1px solid var( --mzruiBlocksManager-blockColor );
+}
+
+/* .......................................................................... */
+mzrui-pianoroll mzrui-keys {
+	font-size: var( --mzruiTimewindow-lineH );
+}
+mzrui-pianoroll .mzruiTimewindow-rows {
+	font-size: var( --mzruiTimewindow-lineH );
+}
+mzrui-pianoroll .mzruiKey-row > div {
+	font-size: var( --mzruiTimewindow-pxperbeat );
+}
+
+/* .......................................................................... */
+mzrui-pianoroll .mzruiBlocksManager-block {
+	border-radius: 2px;
+}
+
+/* .......................................................................... */
+mzrui-pianoroll .mzruiTimewindow-panelContentDown {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.mzruiPianoroll-slidersSelect {
+	border: 0;
+	outline: 0;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+	font-size: 11px;
+	user-select: none;
+	border-radius: 4px;
+	background-color: #fff2;
+	scrollbar-width: none;
+	opacity: .5;
+	transition: .1s opacity;
+}
+.mzruiPianoroll-slidersSelect::-webkit-scrollbar {
+	display: none;
+}
+.mzruiPianoroll-slidersSelect:focus,
+.mzruiPianoroll-slidersSelect:hover {
+	opacity: 1;
+}
+.mzruiPianoroll-slidersSelect option {
+	padding: 1px 4px;
+}
+.mzruiPianoroll-slidersSelect option::after {
+	content: attr( data-number );
+	margin-left: 1ch;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: var( --mzrui-font-number );
+}
+.mzruiPianoroll-slidersSelect option[ value^="gainLFO" ]::after {
+	content: "x" attr( data-number );
+}
+.mzruiPianoroll-slidersSelect option:not( [ data-number ] )::after {
+	content: "";
+}

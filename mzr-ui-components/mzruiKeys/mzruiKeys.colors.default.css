@@ -1,0 +1,14 @@
+:root {
+	--mzruiKeys-blackRow-bg: #0000001a;
+	--mzruiKeys-blackRow-hover-bg: #00000026;
+	--mzruiKeys-whiteRow-hover-bg: #ffffff08;
+}
+
+mzrui-keys {
+	--mzruiKeys-blackKey-gradA: #111;
+	--mzruiKeys-blackKey-gradB: #444;
+	--mzruiKeys-whiteKey-gradA: #888;
+	--mzruiKeys-whiteKey-gradB: #eee;
+	--mzruiKeys-activeKey-gradA: #353b52;
+	--mzruiKeys-activeKey-gradB: #7886bd;
+}

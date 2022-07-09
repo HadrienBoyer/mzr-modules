@@ -1,0 +1,13 @@
+mzrui-drumrows {
+	--mzruiDrumrow-bg: #555;
+	--mzruiDrumrow-slider-bg: #444;
+	--mzruiDrumrow-pan: var( --mzrui-col-pan );
+	--mzruiDrumrow-gain: var( --mzrui-col-gain );
+	--mzruiDrumrow-detune: var( --mzrui-col-detune );
+	--mzruiDrumrow-border: #0002;
+	--mzruiDrumrow-color: #fff;
+	--mzruiDrumrow-grip-bg: #0001;
+	--mzruiDrumrow-toggle-bg: #ffa;
+	--mzruiDrumrow-toggleOff-bg: #fff3;
+	--mzruiDrumrow-prop-bgHover: #fff2;
+}

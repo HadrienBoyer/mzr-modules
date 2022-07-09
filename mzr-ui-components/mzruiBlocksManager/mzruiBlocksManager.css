@@ -1,0 +1,70 @@
+.mzruiBlocksManager {
+	--mzruiBlocksManager-timeline-height: 32px;
+	--mzruiBlocksManager-selection-bgColor: #b226;
+	--mzruiBlocksManager-selection-borderColor: #f44;
+	--mzruiBlocksManager-blockColor: rgba( var( --mzrui-rgb-pattern ), .8 );
+	--mzruiBlocksManager-blockSelectedColor: rgba( var( --mzrui-rgb-patternSelected ), .8 );
+}
+
+/* .......................................................................... */
+.mzruiBlocksManager-selection {
+	position: absolute;
+	box-sizing: border-box;
+	top: 0;
+	z-index: 2;
+	border: 2px solid var( --mzruiBlocksManager-selection-borderColor );
+	border-radius: 4px;
+	background-color: var( --mzruiBlocksManager-selection-bgColor );
+	transition: .2s;
+	transition-property: opacity, visibility;
+}
+.mzruiBlocksManager-selection-hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* .......................................................................... */
+.mzruiBlocksManager-block {
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	background-color: var( --mzruiBlocksManager-blockColor );
+	transition: .1s;
+	transition-property: opacity, background-color;
+}
+.mzruiBlocksManager-block-selected {
+	--mzruiBlocksManager-blockColor: var( --mzruiBlocksManager-blockSelectedColor );
+}
+.mzruiBlocksManager-block-hidden {
+	z-index: 0;
+	opacity: .3;
+}
+.mzruiBlocksManager-block-crop {
+	position: absolute;
+	z-index: 2;
+	width: 50%;
+	height: 100%;
+	max-width: 8px;
+	border-radius: inherit;
+	background-color: #000;
+	opacity: 0;
+	transition: .1s opacity;
+}
+.mzruiBlocksManager-block-cropA {
+	left: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.mzruiBlocksManager-block-cropB {
+	right: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.mzruiBlocksManager-block:hover .mzruiBlocksManager-block-crop,
+.mzruiBlocksManager-block.mzrui-hover .mzruiBlocksManager-block-crop {
+	opacity: .12;
+}
+.mzruiBlocksManager-block .mzruiBlocksManager-block-crop:hover,
+.mzruiBlocksManager-block .mzruiBlocksManager-block-crop.mzrui-hover {
+	opacity: .25;
+}

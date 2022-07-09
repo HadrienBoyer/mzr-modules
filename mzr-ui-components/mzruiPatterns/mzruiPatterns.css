@@ -1,0 +1,158 @@
+mzrui-patterns {
+	--mzruiPatterns-pattern-h: 64px;
+	--mzruiPatterns-pattern-head-h: 26px;
+	--mzruiPatterns-pattern-grip-w: 16px;
+	height: 100%;
+}
+
+/* .......................................................................... */
+#mzruiPatterns-infoPopupContent label {
+	display: flex;
+	align-items: center;
+	height: 32px;
+	cursor: pointer;
+}
+#mzruiPatterns-infoPopupContent .mzruiIcon {
+	width: 20px;
+	margin-left: .4ch;
+	margin-right: .8ch;
+}
+#mzruiPatterns-infoPopupContent input[ name="bpm" ] {
+	margin-left: 8px;
+	width: 8ch;
+}
+#mzruiPatterns-infoPopupContent input[ name="name" ] {
+	width: 214px;
+}
+#mzruiPatterns-infoPopupContent span + span {
+	margin-left: 8px;
+}
+#mzruiPatterns-infoPopupContent input[ value="loop" ]:not( :checked ) ~ span:last-of-type,
+#mzruiPatterns-infoPopupContent input[ value="loop" ]:not( :checked ) ~ input[ name="bpm" ] {
+	opacity: .4;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-panel:first-child {
+	min-height: 28px;
+}
+.mzruiPatterns-panel {
+	display: flex;
+	flex-direction: column;
+	min-height: 32px;
+}
+.mzruiPatterns-panelBuffers,
+.mzruiPatterns-panelDrums,
+.mzruiPatterns-panelSlices {
+	height: 20%;
+}
+.mzruiPatterns-panelKeys {
+	height: 40%;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-panel-menu {
+	display: flex;
+	align-items: center;
+	height: 28px;
+	min-height: 28px;
+	padding: 0 6px;
+	color: var( --mzruiPatterns-panel-menu-color );
+	background-color: var( --mzruiPatterns-panel-menu-bg );
+	user-select: none;
+}
+.mzruiPatterns-panel-icon,
+.mzruiPatterns-panel-title {
+	font-size: 12px;
+	line-height: 1;
+	opacity: .5;
+}
+.mzruiPatterns-panel-icon {
+	margin-right: 4px;
+}
+.mzruiPatterns-panel-title {
+	font-size: 12px;
+	font-weight: bold;
+}
+.mzruiPatterns-panel-menu .mzruiPatterns-btnSolid {
+	margin-left: 8px;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-panel-list {
+	flex: 1;
+	overflow: auto;
+	position: relative;
+}
+.mzruiPatterns-panel-list:empty {
+	display: none;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-destArrow {
+	margin: 0 4px;
+	font-size: 12px;
+	opacity: .7;
+	pointer-events: none;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-btnSolid {
+	display: inline-flex;
+	align-items: center;
+	overflow: hidden;
+	height: 20px;
+	padding: 0 8px;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	border-radius: 3px;
+	line-height: 1;
+	font-size: 12px;
+	color: inherit;
+	font-family: inherit;
+	font-weight: bold;
+	text-align: start;
+	background-color: var( --mzruiPatterns-panel-btnSolid-bg );
+	transition: filter .2s;
+}
+.mzruiPatterns-btnSolid:focus,
+.mzruiPatterns-btnSolid:hover {
+	filter: brightness( 1.1 );
+}
+.mzruiPatterns-btnSolid[ data-action="newSlices" ] { color: var( --mzruiPatterns-newSlicesBtn-color ); }
+.mzruiPatterns-btnSolid[ data-action="newSynth" ] { color: var( --mzruiPatterns-newSynthBtn-color ); }
+.mzruiPatterns-btnSolid[ data-action="newDrums" ] { color: var( --mzruiPatterns-newDrumsBtn-color ); }
+.mzruiPatterns-btnIcon {
+	pointer-events: none;
+}
+.mzruiPatterns-btnText {
+	margin-left: 4px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	pointer-events: none;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-placeholder {
+	display: none;
+	overflow: hidden;
+	flex: 1;
+	padding: 0 10px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	color: var( --mzruiPatterns-panel-menu-color );
+	font-size: 12px;
+	font-weight: bold;
+	opacity: 0;
+	transition: .3s;
+	transition-property: opacity;
+	user-select: none;
+}
+.mzruiPatterns-placeholderToCheck .mzruiPatterns-placeholder:only-child,
+.mzruiPatterns-placeholderToCheck:empty + .mzruiPatterns-placeholder {
+	display: flex;
+	opacity: .4;
+}

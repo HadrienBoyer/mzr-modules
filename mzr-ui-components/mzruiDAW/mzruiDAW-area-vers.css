@@ -1,0 +1,15 @@
+.mzruiDAW-areaVers {
+	grid-area: areaVers;
+	justify-content: end;
+}
+.mzruiDAW-version {
+	opacity: .3;
+}
+.mzruiDAW-version:focus,
+.mzruiDAW-version:hover {
+	opacity: 1;
+}
+.mzruiDAW-version-num {
+	margin-left: 6px;
+	font-family: var( --mzrui-font-number );
+}

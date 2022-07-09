@@ -1,0 +1,117 @@
+mzrui-envelope {
+	display: grid;
+	height: 100%;
+	min-height: 100px;
+	box-sizing: border-box;
+	grid-gap: 6px;
+	grid-template:
+		"head head   head  head  head    head    head" 24px
+		".    attack hold  decay sustain release .   " 28px
+		".    graph  graph graph graph   graph   .   " 1fr
+		".    .      .     .     .        .       .   " 0
+		/0    1fr    1fr   1fr   1fr      1fr     0;
+	color: var( --mzruiEnvelope-txt );
+	font-family: var( --mzrui-font );
+	background-color: var( --mzruiEnvelope-bg );
+	--mzruiSlider-lineColor: var( --mzruiEnvelope-ctrls-color );
+	--mzruiSlider-lineBgColor: var( --mzruiEnvelope-ctrls-bg );
+}
+
+/* .......................................................................... */
+.mzruiEnvelope-prop {
+	display: flex;
+	flex-direction: column;
+}
+.mzruiEnvelope-propLabel {
+	display: flex;
+	align-self: center;
+	align-items: baseline;
+	height: 20px;
+	font-size: 12px;
+	opacity: .5;
+	user-select: none;
+}
+.mzruiEnvelope-propValue::before {
+	content: "·";
+	margin: 0 2px;
+}
+.mzruiEnvelope-propValue {
+	font-family: var( --mzrui-font-number );
+}
+.mzruiEnvelope-propContent {
+	flex: 1;
+	position: relative;
+}
+
+/* .......................................................................... */
+.mzruiEnvelope-attack {
+	grid-area: attack;
+}
+.mzruiEnvelope-hold {
+	grid-area: hold;
+}
+.mzruiEnvelope-decay {
+	grid-area: decay;
+}
+.mzruiEnvelope-sustain {
+	grid-area: sustain;
+}
+.mzruiEnvelope-release {
+	grid-area: release;
+}
+mzrui-envelope .mzruiSlider-eventCatcher {
+	top: -26px;
+	bottom: -6px;
+}
+
+/* .......................................................................... */
+.mzruiEnvelope-head {
+	grid-area: head;
+	display: flex;
+	align-items: center;
+	background-color: var( --mzruiEnvelope-head-bg );
+	user-select: none;
+}
+.mzruiEnvelope-title {
+	font-size: 14px;
+	opacity: .3;
+}
+.mzruiEnvelope-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: normal;
+	border: 0;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	width: 24px;
+	color: var( --mzruiEnvelope-toggle-off );
+	font-size: 8px;
+	cursor: pointer;
+	background: none;
+	transition: .2s color;
+}
+mzrui-envelope[ toggle ] .mzruiEnvelope-toggle {
+	color: var( --mzruiEnvelope-ctrls-color );
+}
+.mzruiEnvelope-toggleCheckbox {
+	display: none;
+}
+
+/* .......................................................................... */
+.mzruiEnvelope-graph {
+	grid-area: graph;
+	position: relative;
+	overflow: hidden;
+	border-radius: 4px;
+	background-color: var( --mzruiEnvelope-wave-bg );
+}
+mzrui-envelope mzrui-envelope-graph {
+	position: absolute;
+	inset: 4px 0 0;
+	color: var( --mzruiEnvelope-wave-off );
+}
+mzrui-envelope[ toggle ] mzrui-envelope-graph {
+	color: var( --mzruiEnvelope-ctrls-color );
+}

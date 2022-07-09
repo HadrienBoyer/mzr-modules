@@ -1,0 +1,22 @@
+.mzruiDAW-popup-tempo {
+	width: 400px;
+}
+.mzruiDAW-popup-tempo .mzruiPopup-row-values {
+	width: 180px;
+}
+.mzruiDAW-bpmTap {
+	display: flex;
+	align-self: normal;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: inherit;
+	width: 32px;
+	min-width: 32px;
+	font-size: 18px;
+	border-radius: 4px;
+	background-color: #fff2;
+}
+.mzruiDAW-bpmTap:hover {
+	background-color: #fff3;
+}

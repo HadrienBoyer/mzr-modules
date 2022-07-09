@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+<link rel="shortcut icon" href="/assets/favicon.png"/>
+<link rel="stylesheet" href="/assets/fonts/fonts.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzrui.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/test-assets/test.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiClock/mzruiClock.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiClock/mzruiClock.css"/>
+
+<!-- ....................................................................... -->
+<style>
+body {
+	--test-content-minh: 32px;
+	--test-content-resize: none;
+}
+</style>
+</head>
+<body>
+
+<!-- ....................................................................... -->
+<div id="TEST">
+	<mzrui-clock mode="second" bpm="60" timedivision="4/4"></mzrui-clock>
+</div>
+<div id="TEST-CTRLS">
+	<input id="time" type="range" value="0" min="0" max="260" step=".1"/>
+</div>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzrui.js"></script>
+<script src="/mzr-ui-components/test-assets/test.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiClock/mzruiClock.html.js"></script>
+<script src="/mzr-ui-components/mzruiClock/mzruiClock.js"></script>
+
+<!-- ....................................................................... -->
+<script>
+const elClock = document.querySelector( "mzrui-clock" );
+const elInput = document.querySelector( "#time" );
+
+elInput.oninput = () => elClock.setTime( +elInput.value );
+elInput.oninput();
+</script>
+</body>
+</html>

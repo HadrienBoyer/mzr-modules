@@ -1,0 +1,235 @@
+mzrui-lfo {
+	display: grid;
+	height: 100%;
+	min-width: 300px;
+	min-height: 100px;
+	box-sizing: border-box;
+	grid-gap: 6px;
+	grid-template:
+		"head head head  head   head  head  head" 24px
+		".    type delay attack speed amp   .   " 28px
+		".    type graph graph  graph graph .   " 1fr
+		".    .    .     .      .     .     .   " 0
+		/0    32px 1fr   1fr    1fr   1fr   0;
+	color: var( --mzruiLFO-txt );
+	font-family: var( --mzrui-font );
+	background-color: var( --mzruiLFO-bg );
+	--mzruiSlider-lineColor: var( --mzruiLFO-ctrls-color );
+	--mzruiSlider-lineBgColor: var( --mzruiLFO-ctrls-bg );
+}
+mzrui-lfo[ target='gain' ] {
+	--mzruiLFO-ctrls-color: var( --mzrui-col-gain );
+}
+mzrui-lfo[ target='lowpass' ] {
+	--mzruiLFO-ctrls-color: var( --mzrui-col-lowpass );
+	grid-template:
+		"head head head    head     head    head    head    head" 24px
+		".    type delay   attack   speed   amp     lpHz    .   " 28px
+		".    type graph   graph    graph   graph   graph   .   " 1fr
+		".    type lpGraph lpGraph  lpGraph lpGraph lpGraph .   " .5fr
+		".    .    .       .        .       .       .       .   " 0
+		/0    32px 1fr   1fr    1fr   1fr   1fr   0;
+}
+
+/* .......................................................................... */
+.mzruiLFO-prop {
+	display: flex;
+	flex-direction: column;
+}
+.mzruiLFO-propLabel {
+	display: flex;
+	align-self: center;
+	align-items: baseline;
+	height: 20px;
+	font-size: 12px;
+	opacity: .5;
+	user-select: none;
+}
+.mzruiLFO-propValue::before {
+	content: "·";
+	margin: 0 2px;
+}
+.mzruiLFO-propValue {
+	font-family: var( --mzrui-font-number );
+}
+.mzruiLFO-propContent {
+	flex: 1;
+	position: relative;
+}
+
+/* .......................................................................... */
+.mzruiLFO-btn {
+	position: relative;
+	cursor: pointer;
+}
+.mzruiLFO-btnInput {
+	position: absolute;
+	visibility: hidden;
+}
+.mzruiLFO-btnIcon {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var( --mzruiLFO-ctrls-bg );
+}
+
+/* .......................................................................... */
+.mzruiLFO-delay {
+	grid-area: delay;
+}
+.mzruiLFO-attack {
+	grid-area: attack;
+}
+.mzruiLFO-speed {
+	grid-area: speed;
+}
+.mzruiLFO-amp {
+	grid-area: amp;
+}
+.mzruiLFO-lowpassfreq {
+	grid-area: lpHz;
+}
+mzrui-lfo:not( [ target='lowpass' ] ) .mzruiLFO-lowpassfreq {
+	display: none;
+}
+mzrui-lfo .mzruiSlider-eventCatcher {
+	top: -26px;
+	bottom: -6px;
+}
+
+/* .......................................................................... */
+.mzruiLFO-head {
+	grid-area: head;
+	display: flex;
+	align-items: center;
+	background-color: var( --mzruiLFO-head-bg );
+	user-select: none;
+}
+.mzruiLFO-title {
+	font-size: 14px;
+	opacity: .3;
+}
+.mzruiLFO-toggle {
+	align-self: normal;
+	border: 0;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	width: 24px;
+	color: var( --mzruiLFO-toggle-off );
+	font-size: 8px;
+	background: none;
+	transition: .2s color;
+}
+mzrui-lfo[ toggle ] .mzruiLFO-toggle {
+	color: var( --mzruiLFO-ctrls-color );
+}
+
+/* .......................................................................... */
+.mzruiLFO-graph {
+	grid-area: graph;
+	position: relative;
+	overflow: hidden;
+	border-radius: 4px;
+	background-color: var( --mzruiLFO-wave-bg );
+}
+.mzruiLFO-ampSigns {
+	position: absolute;
+	inset: 0;
+	width: 10px;
+	display: flex;
+	pointer-events: none;
+	flex-direction: column;
+}
+mzrui-lfo[ toggle ] .mzruiLFO-ampSigns {
+	pointer-events: auto;
+}
+.mzruiLFO-ampSign {
+	flex: 1;
+}
+mzrui-lfo[ toggle ] .mzruiLFO-ampSign {
+	color: var( --mzruiLFO-ctrls-color );
+}
+.mzruiLFO-ampSignIcon {
+	color: var( --mzruiLFO-wave-off );
+	font-size: 11px;
+}
+mzrui-lfo[ toggle ] .mzruiLFO-ampSignIcon {
+	color: var( --mzruiLFO-ctrls-color );
+}
+.mzruiLFO-ampSignRadio:checked + .mzruiLFO-ampSignIcon {
+	color: var( --mzruiLFO-ctrls-bg );
+	background-color: var( --mzruiLFO-wave-off );
+}
+mzrui-lfo[ toggle ] .mzruiLFO-ampSignRadio:checked + .mzruiLFO-ampSignIcon {
+	background-color: var( --mzruiLFO-ctrls-color );
+}
+.mzruiLFO-wave {
+	position: absolute;
+	inset: 0 -2px 0 8px;
+	pointer-events: none;
+}
+.mzruiLFO-wave mzrui-periodicwave {
+	position: absolute;
+	top: 6px;
+	height: calc( 100% - 12px );
+	color: var( --mzruiLFO-wave-off );
+	stroke-width: 2px;
+	transition: color .2s;
+}
+mzrui-lfo[ toggle ] mzrui-periodicwave {
+	color: var( --mzruiLFO-ctrls-color );
+}
+
+/* .......................................................................... */
+.mzruiLFO-lowpassGraph {
+	grid-area: lpGraph;
+	background-color: darkred;
+}
+mzrui-lfo:not( [ target='lowpass' ] ) .mzruiLFO-lowpassGraph {
+	display: none;
+}
+
+/* .......................................................................... */
+.mzruiLFO-type {
+	grid-area: type;
+}
+.mzruiLFO-type .mzruiLFO-propContent {
+	display: flex;
+	overflow: hidden;
+	border-radius: 4px;
+	flex-direction: column;
+}
+.mzruiLFO-typeBtn {
+	flex: 1;
+	cursor: not-allowed;
+}
+mzrui-lfo[ toggle ] .mzruiLFO-typeBtn {
+	cursor: pointer;
+}
+.mzruiLFO-typeSVG {
+	fill: none;
+	stroke: var( --mzruiLFO-wave-off );
+	stroke-width: 2px;
+	background-color: var( --mzruiLFO-ctrls-bg );
+	transition: .2s;
+	transition-property: stroke, background-color;
+}
+mzrui-lfo[ toggle ] .mzruiLFO-typeSVG {
+	stroke: var( --mzruiLFO-ctrls-color );
+}
+.mzruiLFO-typeSVG path {
+	transform: scale( .6 );
+	transform-origin: center;
+}
+.mzruiLFO-typeRadio:checked + .mzruiLFO-typeSVG {
+	stroke: var( --mzruiLFO-ctrls-bg );
+	background-color: var( --mzruiLFO-wave-off );
+}
+mzrui-lfo[ toggle ] .mzruiLFO-typeRadio:checked + .mzruiLFO-typeSVG {
+	background-color: var( --mzruiLFO-ctrls-color );
+}

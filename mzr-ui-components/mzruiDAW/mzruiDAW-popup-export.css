@@ -1,0 +1,33 @@
+.mzruiDAW-popup-export {
+	width: 500px;
+}
+.mzruiDAW-popup-export-wrap {
+	display: flex;
+	padding: 10px 0;
+}
+.mzruiDAW-popup-export-progress {
+	flex: 1;
+	height: 28px;
+}
+.mzruiDAW-popup-export-btn {
+	padding: 0 .8em;
+	border-radius: 2px;
+	margin-right: 10px;
+	font-size: 12px;
+	line-height: 28px;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #ff9;
+}
+.mzruiDAW-popup-export-btn > span {
+	display: none;
+	color: #111;
+}
+.mzruiDAW-popup-export-btn[ data-status="0" ] .mzruiDAW-popup-export-btn0,
+.mzruiDAW-popup-export-btn[ data-status="1" ] .mzruiDAW-popup-export-btn1,
+.mzruiDAW-popup-export-btn[ data-status="2" ] .mzruiDAW-popup-export-btn2 {
+	display: inline;
+}
+.mzruiDAW-popup-export-btn .mzruiIcon {
+	margin-left: .3em;
+}

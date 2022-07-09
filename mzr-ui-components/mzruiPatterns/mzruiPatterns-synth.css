@@ -1,0 +1,119 @@
+.mzruiPatterns-synth {
+	display: flex;
+	flex-direction: column;
+	color: var( --mzruiPatterns-synth-color );
+	border-bottom: 0 solid var( --mzruiPatterns-synth-bg );
+	background-color: var( --mzruiPatterns-synth-bg );
+	transition: .2s;
+	transition-property:
+		border-bottom-color,
+		background-color,
+		filter;
+}
+.mzruiPatterns-synth-expanded {
+	filter: brightness( 1.1 );
+	border-bottom-width: 2px;
+}
+.mzruiPatterns-synth-selected {
+	--mzruiPatterns-synth-bg: var( --mzruiPatterns-synth-selected-bg );
+	--mzruiPatterns-synth-color: var( --mzruiPatterns-synth-selected-color );
+}
+
+/* .......................................................................... */
+.mzruiPatterns-synth-head {
+	display: flex;
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+	user-select: none;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-synth-btn {
+	width: 20px;
+	min-width: 20px;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	opacity: .7;
+	color: inherit;
+	cursor: pointer;
+	background: none;
+	font-size: 14px;
+	transition: .1s;
+	transition-property: background-color, opacity;
+}
+.mzruiPatterns-synth-btn:focus,
+.mzruiPatterns-synth-btn:hover {
+	opacity: 1;
+}
+.mzruiPatterns-synth:not( .mzruiPatterns-synth-selected ) .mzruiPatterns-synth-btn:hover {
+	color: var( --mzruiPatterns-synth-namehover-color );
+}
+
+/* .......................................................................... */
+.mzruiPatterns-synth-expand {
+	width: 16px;
+	min-width: 16px;
+	background-color: var( --mzruiPatterns-synth-expand-bg );
+}
+.mzruiPatterns-synth-expanded .mzruiPatterns-synth-expand {
+	opacity: 1;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-synth-info {
+	flex: 1;
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	padding-left: 6px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-weight: bold;
+}
+.mzruiPatterns-synth-name {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	pointer-events: none;
+}
+.mzruiPatterns-synth-name:empty::before {
+	content: "Untitled";
+	font-style: italic;
+	opacity: .8;
+}
+.mzruiPatterns-synth-dest {
+	background-color: var( --mzruiPatterns-synth-dest-bg );
+}
+.mzruiPatterns-synth-dest:hover,
+.mzruiPatterns-synth-dest:focus {
+	color: var( --mzruiPatterns-synth-bg );
+	background-color: var( --mzruiPatterns-panel-btnSolid-bg );
+}
+
+/* .......................................................................... */
+.mzruiPatterns-synth-patterns {
+	position: relative;
+	overflow: hidden;
+	min-height: 0;
+	background-color: var( --mzruiPatterns-synth-patterns-bg );
+	transition: .3s min-height;
+}
+.mzruiPatterns-synth-expanded .mzruiPatterns-synth-patterns {
+	overflow-y: auto;
+	min-height: 32px;
+}
+.mzruiPatterns-synth .mzruiPatterns-pattern {
+	margin-top: calc( var( --mzruiPatterns-pattern-h ) * -1 );
+}
+.mzruiPatterns-synth-expanded .mzruiPatterns-pattern {
+	margin-top: 0;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-synth .mzruiPatterns-placeholder {
+	position: absolute;
+	inset: 0;
+}

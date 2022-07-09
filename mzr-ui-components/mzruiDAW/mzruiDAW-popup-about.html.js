@@ -1,0 +1,31 @@
+"use strict";
+
+MZRUI.$setTemplate( "mzrui-daw-popup-about", () =>
+	MZRUI.$createElement( "div", { class: "mzruiDAW-popup-about" },
+		MZRUI.$createElement( "div", { class: "mzruiDAW-popup-about-head" },
+			MZRUI.$createElement( "span", { class: "mzruiDAW-popup-about-title" }, "GridSound" ),
+			MZRUI.$createElement( "span", { class: "mzruiDAW-popup-about-versionNum" } ),
+			MZRUI.$createElement( "i", { class: "mzruiIcon" } ),
+			MZRUI.$createElement( "button", { class: "mzruiDAW-popup-about-versionCheck", type: "button" }, "check the version" ),
+		),
+		MZRUI.$createElement( "div", null,
+			"GridSound is a ",
+			MZRUI.$createElement( "b", null, "work-in-progress" ),
+			" free browser-based digital audio workstation following the ",
+			MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", href: "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API" }, "Web Audio API" ),
+			".",
+		),
+		MZRUI.$createElement( "div", null,
+			"You can create an account (by clicking ", MZRUI.$createElement( "i", { class: "mzruiIcon", "data-icon": "profile" } ),
+			") and start uploading your compositions online ", MZRUI.$createElement( "i", { class: "mzruiIcon", "data-icon": "cloud" } ),
+		),
+		MZRUI.$createElement( "div", { class: "mzruiDAW-popup-about-links" },
+			MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", title: "GitHub",   class: "mzruiIcon mzruiIconB", "data-icon": "github",   href: "https://github.com/gridsound" } ),
+			MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", title: "Twitter",  class: "mzruiIcon mzruiIconB", "data-icon": "twitter",  href: "https://twitter.com/gridsound" } ),
+			MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", title: "YouTube",  class: "mzruiIcon mzruiIconB", "data-icon": "youtube",  href: "https://youtube.com/channel/UC2-jebT7TS8xJgJPymXqatA" } ),
+			MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", title: "Facebook", class: "mzruiIcon mzruiIconB", "data-icon": "facebook", href: "https://facebook.com/gridsound" } ),
+			MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", title: "CodePen",  class: "mzruiIcon mzruiIconB", "data-icon": "codepen",  href: "https://codepen.io/gridsound" } ),
+			MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", title: "Discord",  class: "mzruiIcon mzruiIconB", "data-icon": "discord",  href: "https://discord.gg/NUYxHAg" } ),
+		),
+	)
+);

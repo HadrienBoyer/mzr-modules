@@ -1,0 +1,264 @@
+mzrui-drumrows {
+	display: flex;
+	flex-direction: column;
+	font-size: var( --mzruiTimewindow-lineH );
+}
+mzrui-drumrows::-webkit-scrollbar {
+	display: none;
+}
+
+/* .......................................................................... */
+.mzruiDrumrows-drop {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	order: 1;
+	height: 1em;
+	pointer-events: none;
+	opacity: 0;
+}
+mzrui-drumrows.mzruiDrumrows-dragover > .mzruiDrumrows-drop {
+	opacity: 1;
+}
+.mzruiDrumrows-dropIn {
+	font-size: 24px;
+	opacity: .5;
+}
+
+/* .......................................................................... */
+.mzruiDrumrow {
+	--grip-w: 16px;
+	--toggle-w: 20px;
+	--name-h: 16px;
+	--propsExpand-w: 16px;
+	--delete-w: 14px;
+	--slider-w: 7px;
+	--props-h: 1.5em;
+	position: relative;
+	box-sizing: border-box;
+	height: calc( 1em + 1px );
+	min-height: calc( 1em + 1px );
+	margin-top: -1px;
+	border: 0 solid var( --mzruiDrumrow-border );
+	border-width: 1px 0;
+	background-color: var( --mzruiDrumrow-bg );
+	transition: .2s height, .2s min-height, .1s filter;
+}
+.mzruiDrumrow-mute {
+	--mzruiDrumrow-toggle-bg: var( --mzruiDrumrow-toggleOff-bg );
+	filter: brightness( .8 ) contrast( .8 );
+}
+.mzruiDrumrow-open {
+	height: calc( 1em + 1px + var( --props-h ) );
+	min-height: calc( 1em + 1px + var( --props-h ) );
+}
+
+/* .......................................................................... */
+.mzruiDrumrow-main {
+	position: absolute;
+	box-sizing: border-box;
+	inset: 0 0 auto var( --grip-w );
+	height: 1em;
+	min-height: 1em;
+	border-bottom: 1px dashed var( --mzruiDrumrow-border );
+}
+.mzruiDrumrow.mzruiDrumrows-dragover .mzruiDrumrow-main {
+	opacity: 0;
+	pointer-events: none;
+}
+.mzruiDrumrow-props {
+	position: absolute;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	inset: 1em 0 0 var( --grip-w );
+}
+.mzruiDrumrow-prop {
+	outline: 0;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: inherit;
+	cursor: pointer;
+}
+.mzruiDrumrow-propPan { --color: var( --mzruiDrumrow-pan ); }
+.mzruiDrumrow-propGain { --color: var( --mzruiDrumrow-gain ); }
+.mzruiDrumrow-propDetune { --color: var( --mzruiDrumrow-detune ); }
+.mzruiDrumrow-prop + .mzruiDrumrow-prop {
+	margin-left: 4px;
+}
+.mzruiDrumrow-propRadio {
+	position: absolute;
+	visibility: hidden;
+}
+.mzruiDrumrow-propSpan {
+	color: var( --color );
+	padding: 2px 4px;
+	border-radius: 3px;
+	opacity: 0;
+	transition: .1s background-color, .2s opacity;
+}
+.mzruiDrumrow-propSpanValue {
+	font-size: 14px;
+	font-family: var( --mzrui-font-number );
+}
+.mzruiDrumrow-open .mzruiDrumrow-propSpan {
+	opacity: 1;
+}
+.mzruiDrumrow-propSpan:focus,
+.mzruiDrumrow-propSpan:hover {
+	background-color: var( --mzruiDrumrow-prop-bgHover );
+}
+.mzruiDrumrow-propRadio:checked + .mzruiDrumrow-propSpan {
+	color: var( --mzruiDrumrow-bg );
+	background-color: var( --color );
+}
+
+/* .......................................................................... */
+.mzruiDrumrow-grip {
+	position: absolute;
+	width: var( --grip-w );
+	inset: 0 auto 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	cursor: grab;
+	background-color: var( --mzruiDrumrow-grip-bg );
+}
+.mzruiDrumrow-grip .mzruiIcon {
+	pointer-events: none;
+	opacity: .4;
+}
+.mzruiDrumrow-btnToggle {
+	position: absolute;
+	inset: 0 auto auto 0;
+	width: var( --toggle-w );
+	height: var( --name-h );
+	border: 0;
+	outline: 0;
+	padding: 0;
+	font-size: 8px;
+	color: var( --mzruiDrumrow-toggle-bg );
+	cursor: pointer;
+	background: none;
+	transition: .1s opacity;
+}
+.mzruiDrumrow-name {
+	position: absolute;
+	inset: 0 calc( var( --delete-w ) + var( --propsExpand-w ) + 6px ) auto var( --toggle-w );
+	height: var( --name-h );
+	line-height: var( --name-h );
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 12px;
+	font-weight: bold;
+	pointer-events: none;
+}
+.mzruiDrumrow-nameInfo {
+	font-style: italic;
+	font-weight: normal;
+	opacity: .7;
+}
+
+/* .......................................................................... */
+.mzruiDrumrow-waveWrap {
+	position: absolute;
+	overflow: hidden;
+	inset: var( --name-h ) calc( var( --slider-w ) * 3 + 8px ) 0 0;
+	pointer-events: none;
+}
+.mzruiDrumrow-wave {
+	position: absolute;
+	inset: 0 auto auto 0;
+	width: 100%;
+	height: 100%;
+	fill: currentColor;
+	opacity: .5;
+}
+.mzruiDrumrow-startCursor {
+	position: absolute;
+	inset: 0 auto auto 0;
+	width: 100%;
+	height: 100%;
+	border-right: 2px solid;
+	background-image: linear-gradient( 90deg, transparent 0%, currentColor 300% );
+	animation-name: mzruiDrumrow-startCursor-anim;
+	animation-duration: inherit;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+.mzruiDrumrow-mute .mzruiDrumrow-startCursor {
+	visibility: hidden;
+}
+
+@keyframes mzruiDrumrow-startCursor-anim {
+	from { left: -100%; }
+	to { left: 100%; }
+}
+
+/* .......................................................................... */
+.mzruiDrumrow-detune,
+.mzruiDrumrow-pan,
+.mzruiDrumrow-gain {
+	--mzruiSlider-lineBgColor: var( --mzruiDrumrow-slider-bg );
+	position: absolute;
+	inset: var( --name-h ) auto 2px;
+	width: var( --slider-w );
+}
+.mzruiDrumrow .mzruiSlider-eventCatcher {
+	inset: -2px;
+}
+.mzruiDrumrow-detune {
+	--mzruiSlider-lineColor: var( --mzruiDrumrow-detune );
+	right: calc( 2 * var( --slider-w ) + 6px );
+}
+.mzruiDrumrow-pan {
+	--mzruiSlider-lineColor: var( --mzruiDrumrow-pan );
+	right: calc( var( --slider-w ) + 4px );
+}
+.mzruiDrumrow-gain {
+	--mzruiSlider-lineColor: var( --mzruiDrumrow-gain );
+	right: 2px;
+}
+
+/* .......................................................................... */
+.mzruiDrumrow .mzruiDrumrows-drop {
+	position: absolute;
+	inset: 0;
+}
+.mzruiDrumrow.mzruiDrumrows-dragover .mzruiDrumrows-drop {
+	opacity: 1;
+}
+.mzruiDrumrow-btnProps,
+.mzruiDrumrow-btnDelete {
+	position: absolute;
+	right: 0;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	width: var( --delete-w );
+	height: var( --name-h );
+	color: inherit;
+	cursor: pointer;
+	font-size: 12px;
+	background: none;
+	opacity: .3;
+	transition: .1s opacity;
+}
+.mzruiDrumrow-btnProps {
+	right: calc( var( --delete-w ) + 2px );
+	width: var( --propsExpand-w );
+	opacity: .5;
+}
+.mzruiDrumrow-open .mzruiDrumrow-btnProps {
+	text-shadow: 0 0 6px;
+	opacity: .8;
+}
+.mzruiDrumrow .mzruiDrumrow-btnProps:hover,
+.mzruiDrumrow .mzruiDrumrow-btnProps:focus,
+.mzruiDrumrow .mzruiDrumrow-btnDelete:hover,
+.mzruiDrumrow .mzruiDrumrow-btnDelete:focus {
+	opacity: 1;
+}

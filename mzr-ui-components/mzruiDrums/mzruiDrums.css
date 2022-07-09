@@ -1,0 +1,135 @@
+mzrui-drums {
+	display: block;
+	height: 100%;
+	color: var( --mzruiDrums-color );
+}
+
+/* .......................................................................... */
+mzrui-drums .mzruiTimewindow-currentTime {
+	margin-left: 0;
+	opacity: .1;
+}
+mzrui-drums .mzruiTimewindow-step {
+	display: none;
+}
+
+/* .......................................................................... */
+.mzruiDrums-line.mzruiReorder-dragging {
+	opacity: .5;
+	background-color: #0004;
+}
+.mzruiDrums-line {
+	position: relative;
+	width: 1000000px;
+	font-size: var( --mzruiTimewindow-lineH );
+	height: 1em;
+	box-sizing: border-box;
+	border-bottom: 1px solid var( --mzruiDrums-line-border );
+	transition: .2s height, .1s filter, .1s background-color;
+}
+.mzruiDrums-lineOpen {
+	height: calc( 1em + 1.5em );
+}
+.mzruiDrums-line.mzruiDrumrow-mute {
+	filter: brightness( .8 ) contrast( .8 );
+	background-color: var( --mzruiDrums-line-mute-bg );
+}
+.mzruiDrums-lineDrums {
+	position: absolute;
+	inset: 0;
+	height: 1em;
+}
+.mzruiDrums-lineIn {
+	height: 100%;
+	box-sizing: border-box;
+	border-bottom: 1px dashed var( --mzruiDrums-line-border );
+	font-size: var( --mzruiTimewindow-pxperbeat );
+	cursor: pointer;
+}
+.mzruiDrums-lineProps {
+	position: absolute;
+	inset: 1em 0 0;
+}
+
+/* .......................................................................... */
+.mzruiDrums-drumHover,
+.mzruiDrums-drumcutHover {
+	position: absolute;
+	z-index: 1;
+	background-color: #0002;
+}
+.mzruiDrums-drumHover {
+	height: 66%;
+}
+.mzruiDrums-drumcutHover {
+	bottom: 0;
+	height: 34%;
+}
+.mzruiDrums-drumcutHoverIn,
+.mzruiDrums-drumHoverIn {
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0 1px 1px 0;
+	border: 2px solid var( --mzruiDrums-drumHover-border );
+	border-radius: 4px;
+	background-color: var( --mzruiDrums-drumHover-bg );
+	pointer-events: none;
+}
+
+/* .......................................................................... */
+.mzruiDrums-drum,
+.mzruiDrums-drumcut {
+	position: absolute;
+	width: 1em;
+}
+.mzruiDrums-drum {
+	height: 66%;
+}
+.mzruiDrums-drumcut {
+	bottom: 1px;
+	height: calc( 34% - 2px );
+}
+.mzruiDrums-previewDeleted,
+.mzruiDrums-preview {
+	opacity: .4;
+}
+.mzruiDrums-drumIn,
+.mzruiDrums-drumcutIn {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	margin: 0 1px 1px 0;
+	border-radius: 2px;
+	color: var( --mzruiDrums-drum-color );
+	background-color: var( --mzruiDrums-drum-bg );
+	pointer-events: none;
+}
+.mzruiDrums-drumcutIn {
+	font-size: 10px;
+	background-color: var( --mzruiDrums-drumcut-bg );
+}
+.mzruiDrums-drumcutIn .mzruiIcon {
+	opacity: .7;
+}
+.mzruiDrums-drumProp {
+	position: relative;
+	width: 100%;
+	height: 3px;
+	background-color: var( --mzruiDrums-drumprop-bg );
+	transition: .1s height;
+}
+.mzruiDrums-lineOpen[ data-prop="pan" ] .mzruiDrums-drumProp[ data-value="pan" ],
+.mzruiDrums-lineOpen[ data-prop="gain" ] .mzruiDrums-drumProp[ data-value="gain" ],
+.mzruiDrums-lineOpen[ data-prop="detune" ] .mzruiDrums-drumProp[ data-value="detune" ] {
+	height: 6px;
+}
+.mzruiDrums-drumProp + .mzruiDrums-drumProp {
+	margin-top: 2px;
+}
+.mzruiDrums-drumPropValue {
+	position: absolute;
+	height: 100%;
+	background-color: var( --mzruiDrums-drumprop-color );
+}

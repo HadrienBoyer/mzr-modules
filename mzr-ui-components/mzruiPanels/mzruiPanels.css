@@ -1,0 +1,40 @@
+.mzruiPanels-x,
+.mzruiPanels-y {
+	display: flex;
+	height: 100%;
+}
+.mzruiPanels-y {
+	flex-direction: column;
+}
+.mzruiPanels-x > div:not( .mzruiPanels-extend ),
+.mzruiPanels-y > div:not( .mzruiPanels-extend ) {
+	position: relative;
+	box-sizing: border-box;
+}
+.mzruiPanels-x > div + div:not( .mzruiPanels-extend ) { border-left: 4px solid var( --mzruiPanels-border ); }
+.mzruiPanels-y > div + div:not( .mzruiPanels-extend ) { border-top: 4px solid var( --mzruiPanels-border ); }
+
+/* .mzruiPanels-extend ------------------------------------------------------- */
+.mzruiPanels-extend {
+	position: absolute;
+	z-index: 999;
+	top: -2px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: background-color .2s;
+}
+.mzruiPanels-extend.mzrui-hover,
+.mzruiPanels-extend:hover {
+	background-color: var( --mzruiPanels-extendColor );
+}
+.mzruiPanels-x > div > .mzruiPanels-extend {
+	cursor: col-resize;
+	width: 4px;
+	margin-left: -2px;
+}
+.mzruiPanels-y > div > .mzruiPanels-extend {
+	cursor: row-resize;
+	height: 4px;
+	margin-top: -2px;
+}

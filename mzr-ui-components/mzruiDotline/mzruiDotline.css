@@ -1,0 +1,58 @@
+:root {
+	--mzruiDotline-color: #000;
+	--mzruiDotline-lineWidth: 1px;
+	--mzruiDotline-dotBg: transparent;
+	--mzruiDotline-dotSize: 12px;
+	--mzruiDotline-dotSizeHover: calc( var( --mzruiDotline-dotSize ) * 2 );
+	--mzruiDotline-dotHandleSize: 10px;
+}
+
+.mzruiDotline {
+	position: relative;
+	overflow: hidden;
+	color: var( --mzruiDotline-color );
+	stroke: currentColor;
+	stroke-width: var( --mzruiDotline-lineWidth );
+}
+
+.mzruiDotline svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.mzruiDotline polyline {
+	fill: none;
+}
+
+.mzruiDotline-dot {
+	position: absolute;
+	z-index: 1;
+	box-sizing: border-box;
+	width: var( --mzruiDotline-dotSize );
+	height: var( --mzruiDotline-dotSize );
+	margin:
+		calc( var( --mzruiDotline-dotSize ) / -2 ) 0 0
+		calc( var( --mzruiDotline-dotSize ) / -2 );
+	border-radius: 50%;
+	border: 2px solid;
+	background-color: var( --mzruiDotline-dotBg );
+	transition: .2s;
+	transition-property: width, height, margin-left, margin-top;
+}
+.mzruiDotline-dot:hover,
+.mzruiDotline-dotSelected {
+	--mzruiDotline-dotSize: var( --mzruiDotline-dotSizeHover );
+}
+.mzruiDotline-dot::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: var( --mzruiDotline-dotHandleSize ) solid transparent;
+	margin: calc( var( --mzruiDotline-dotHandleSize ) * -1 );
+	border-radius: 50%;
+}

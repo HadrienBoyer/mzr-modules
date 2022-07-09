@@ -1,0 +1,8 @@
+mzrui-track {
+	--mzruiTrack-hsl-h: 0;
+	--mzruiTrack-hsl-s: 0%;
+	--mzruiTrack-hsl-l: 33%;
+	--mzruiTrack-color: #fff;
+	--mzruiTrack-toggle-bg: #ffa;
+	--mzruiTrack-toggleOff-bg: #fff3;
+}

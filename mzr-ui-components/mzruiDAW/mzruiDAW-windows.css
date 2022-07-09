@@ -1,0 +1,62 @@
+.mzruiDAW .mzruiDrums,
+.mzruiDAW .mzruiPianoroll,
+.mzruiDAW .mzruiPatternroll,
+.mzruiDAW .mzruiSynthesizer {
+	height: 100%;
+	outline: 0;
+}
+
+/* .......................................................................... */
+.mzruiDAW .mzruiWindow[ data-id="mixer" ] .mzruiWindow-content {
+	overflow-y: hidden;
+}
+
+/* .......................................................................... */
+.mzruiDAW-winBtn {
+	height: 20px;
+	padding: 0 8px;
+	max-width: 110px;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 3px;
+	line-height: 1;
+	color: inherit;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: inherit;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	background-color: var( --mzruiDAW-winBtn-bg );
+	transition: filter .2s;
+}
+.mzruiDAW-winBtn:focus,
+.mzruiDAW-winBtn:hover {
+	filter: brightness( 1.1 );
+}
+.mzruiDAW-winBtn:empty::before {
+	content: "Untitled";
+	font-style: italic;
+}
+.mzruiDAW-winBtn .mzruiIcon,
+.mzruiDAW-winBtn span {
+	pointer-events: none;
+}
+.mzruiDAW-winBtn .mzruiIcon + span {
+	margin-left: 4px;
+}
+
+/* .......................................................................... */
+.mzruiDAW-winBtn + .mzruiIcon {
+	margin: 0 6px;
+	pointer-events: none;
+}
+
+/* .......................................................................... */
+.mzruiDAW-winBtn[ data-target="channel" ],
+.mzruiDAW-winBtn[ data-target="synthChannel" ] { color: var( --mzruiDAW-winBtn-chan-color ); }
+.mzruiDAW-winBtn[ data-target="drums" ],
+.mzruiDAW-winBtn[ data-target="pianoroll" ] { color: var( --mzruiDAW-winBtn-pattern-color ); }
+.mzruiDAW-winBtn[ data-target="synth" ] { color: var( --mzruiDAW-winBtn-synth-color ); }
+.mzruiDAW-winBtn[ data-target="slices" ] { color: var( --mzruiDAW-winBtn-slices-color ); }

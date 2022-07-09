@@ -1,0 +1,18 @@
+.mzruiDAW-areaWins {
+	grid-area: areaWins;
+	white-space: nowrap;
+	gap: 0;
+}
+.mzruiDAW-areaWins .mzruiDAW-btn {
+	flex: 1;
+	font-size: 12px;
+	background-color: var( --mzruiDAW-head-winBtn-bg );
+}
+.mzruiDAW-areaWins .mzruiDAW-btn + .mzruiDAW-btn {
+	margin-left: 0;
+	border-left: 1px dashed rgba( 0, 0, 0, .2 );
+}
+.mzruiDAW-areaWins .mzruiDAW-btn[ data-open ] {
+	color: var( --mzruiDAW-bg );
+	background-color: var( --mzruiDAW-head-winBtn-open-bg );
+}

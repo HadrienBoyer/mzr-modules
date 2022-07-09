@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"/>
+<link rel="shortcut icon" href="/assets/favicon.png"/>
+<link rel="stylesheet" href="/assets/fonts/fonts.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzrui.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/test-assets/test.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiIcon/mzruiIcon.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSlider/mzruiSlider.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiSpectrum/mzruiSpectrum.css"/>
+
+<!-- ....................................................................... -->
+<link rel="stylesheet" href="/mzr-ui-components/mzruiChannel/mzruiChannel.colors.default.css"/>
+<link rel="stylesheet" href="/mzr-ui-components/mzruiChannel/mzruiChannel.css"/>
+
+<!-- ....................................................................... -->
+<style>
+body {
+	--test-content-w: 80px;
+	--test-content-h: 320px;
+	--test-content-resize: vertical;
+}
+#testWrap {
+	display: flex;
+}
+</style>
+</head>
+<body>
+
+<!-- ....................................................................... -->
+<div id="TEST">
+	<mzrui-channel></mzrui-channel>
+</div>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzrui.js"></script>
+<script src="/mzr-ui-components/test-assets/test.js"></script>
+<script src="/mzr-ui-components/mzruiAnalyser/mzruiAnalyser.js"></script>
+<script src="/mzr-ui-components/mzruiSpectrum/mzruiSpectrum.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.html.js"></script>
+<script src="/mzr-ui-components/mzruiSlider/mzruiSlider.js"></script>
+
+<!-- ....................................................................... -->
+<script src="/mzr-ui-components/mzruiChannel/mzruiChannel.html.js"></script>
+<script src="/mzr-ui-components/mzruiChannel/mzruiChannel.js"></script>
+
+<!-- ....................................................................... -->
+<script>
+const chan = document.querySelector( "mzrui-channel" );
+
+MZRUI.$setAttribute( chan, "name", "chan" );
+</script>
+</body>
+</html>

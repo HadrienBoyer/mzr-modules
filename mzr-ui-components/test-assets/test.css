@@ -1,0 +1,154 @@
+:root {
+	--test-content-w: auto;
+	--test-content-h: auto;
+	--test-content-minw: auto;
+	--test-content-minh: auto;
+	--test-content-resize: both;
+}
+
+html,
+body {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	color: #fff;
+	font-size: 16px;
+	font-family: "Montserrat", sans-serif;
+	background-color: #22222a;
+	background-image: url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23000' fill-opacity='0.1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E" );
+}
+
+#testLinks {
+	flex: 1;
+	display: flex;
+	max-width: 600px;
+	flex-wrap: wrap;
+	align-self: center;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	background-image: linear-gradient( 180deg, #f55, #c4a );
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.testLink {
+	margin: .5ch;
+	padding: .5ch 1ch;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: .5ch;
+}
+.testLink:hover {
+	animation: alternate infinite testLinkAnim .25s;
+}
+@keyframes testLinkAnim {
+	100% { background-color: #ffffff08; }
+}
+
+#testBody {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+#testHead {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+}
+#testTitle {
+	font-weight: bold;
+}
+#testSelect {
+	margin-left: 16px;
+	border: 0;
+	border-radius: 4px;
+	padding: 6px 4px;
+	font: inherit;
+	color: inherit;
+	background-color: #0005;
+}
+#testSelect option {
+	background-color: #000;
+}
+#testContent {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	resize: var( --test-content-resize );
+	gap: 10px;
+	padding: 32px;
+	width: var( --test-content-w );
+	height: var( --test-content-h );
+	min-width: 100px;
+	min-height: 50px;
+	border-radius: 8px;
+	border: 2px solid #0003;
+	border-bottom-width: 6px;
+	background-color: #22222a;
+	box-shadow: 0 0 20px 20px #22222a;
+}
+#testContent::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border: 10px solid transparent;
+	border-right-color: #0003;
+	border-bottom-color: #0003;
+	pointer-events: none;
+}
+#testWrap {
+	flex: 1;
+	overflow: auto;
+	min-width: var( --test-content-minw );
+	min-height: var( --test-content-minh );
+	scrollbar-width: thin;
+	scrollbar-color: #aaa #ddd;
+}
+#testWrap::-webkit-scrollbar { width: 8px; height: 8px; }
+#testWrap::-webkit-scrollbar-track { background-color: #ddd; }
+#testWrap::-webkit-scrollbar-thumb { background-color: #aaa; }
+#testCtrls:empty {
+	display: none;
+}
+#testDeps {
+	position: relative;
+	z-index: 1;
+	margin-top: 32px;
+	font-size: 11px;
+}
+#testDeps:empty {
+	display: none;
+}
+#testDeps::before {
+	content: "dependencies:";
+	opacity: .5;
+}
+.testDep {
+	margin-left: 1.5ch;
+	font-weight: bold;
+}
+#testFoot {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: auto;
+	height: 48px;
+}
+#testCopyright {
+	font-size: 11px;
+	font-weight: bold;
+	color: inherit;
+	opacity: .5;
+}
+#testCopyright a {
+	color: inherit;
+}

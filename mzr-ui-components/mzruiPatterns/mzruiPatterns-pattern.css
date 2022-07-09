@@ -1,0 +1,127 @@
+.mzruiPatterns-pattern {
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+	flex-direction: column;
+	height: var( --mzruiPatterns-pattern-h );
+	color: var( --mzruiPatterns-pattern-color );
+	border-bottom: 2px solid transparent;
+	background-color: var( --mzruiPatterns-pattern-bg );
+	transition:
+		margin-top .3s,
+		background-color .1s;
+}
+.mzruiPatterns-pattern-selected {
+	--mzruiPatterns-pattern-bg: var( --mzruiPatterns-pattern-selected-bg );
+	--mzruiPatterns-pattern-color: var( --mzruiPatterns-pattern-selected-color );
+	--mzruiPatterns-pattern-head-bg: var( --mzruiPatterns-pattern-head-selected-bg );
+}
+
+/* .......................................................................... */
+.mzruiPatterns-pattern-grip {
+	position: absolute;
+	inset: 0;
+	width: calc( var( --mzruiPatterns-pattern-grip-w ) - 2px );
+	cursor: grab;
+	font-size: 14px;
+	text-align: center;
+	line-height: var( --mzruiPatterns-pattern-h );
+	background-color: var( --mzruiPatterns-pattern-head-bg );
+}
+
+/* .......................................................................... */
+.mzruiPatterns-pattern-btn {
+	width: 20px;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	opacity: .7;
+	color: inherit;
+	cursor: pointer;
+	font-size: 14px;
+	background: none;
+	transition: .1s opacity;
+}
+.mzruiPatterns-pattern-btn:focus,
+.mzruiPatterns-pattern-btn:hover {
+	opacity: 1;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-pattern-head {
+	display: flex;
+	box-sizing: border-box;
+	position: absolute;
+	inset: 0 0 auto var( --mzruiPatterns-pattern-grip-w );
+	height: var( --mzruiPatterns-pattern-head-h );
+	line-height: var( --mzruiPatterns-pattern-head-h );
+	background-color: var( --mzruiPatterns-pattern-head-bg );
+	transition: inherit;
+}
+.mzruiPatterns-pattern-info {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	padding: 0 8px;
+	overflow: hidden;
+}
+.mzruiPatterns-pattern-btnInfo {
+	width: 1em;
+	margin-right: 8px;
+}
+.mzruiPatterns-pattern-name {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 12px;
+	font-weight: bold;
+}
+.mzruiPatterns-pattern-name:empty::after {
+	content: "Untitled";
+	font-style: italic;
+	opacity: .5;
+}
+.mzruiPatterns-pattern-dest {
+	background-color: var( --mzruiPatterns-pattern-dest-bg );
+}
+.mzruiPatterns-pattern-dest:hover,
+.mzruiPatterns-pattern-dest:focus {
+	color: var( --mzruiPatterns-pattern-bg );
+	background-color: var( --mzruiPatterns-pattern-color );
+}
+
+/* .......................................................................... */
+.mzruiPatterns-pattern-content,
+.mzruiPatterns-pattern-placeholder {
+	position: absolute;
+	inset: var( --mzruiPatterns-pattern-head-h ) 0 0 var( --mzruiPatterns-pattern-grip-w );
+	pointer-events: none;
+}
+.mzruiPatterns-pattern-svg {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .8;
+	fill: currentColor;
+}
+
+/* .......................................................................... */
+.mzruiPatterns-pattern-placeholder {
+	display: none;
+	align-items: center;
+	font-size: 14px;
+	opacity: .5;
+}
+.mzruiPatterns-pattern[ data-missing ] .mzruiPatterns-pattern-placeholder {
+	display: flex;
+}
+.mzruiPatterns-pattern-placeholderIcon {
+	margin: 0 8px;
+}
+.mzruiPatterns-pattern-placeholderText {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	user-select: none;
+}

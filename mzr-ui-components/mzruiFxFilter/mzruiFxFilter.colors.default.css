@@ -1,0 +1,8 @@
+mzrui-fx-filter {
+	--mzruiFxFilter-bg: #666;
+	--mzruiFxFilter-inputBg: #555;
+	--mzruiFxFilter-Q: #d7b;
+	--mzruiFxFilter-gain: var( --mzrui-col-gain );
+	--mzruiFxFilter-detune: var( --mzrui-col-detune );
+	--mzruiFxFilter-frequency: #8c8;
+}

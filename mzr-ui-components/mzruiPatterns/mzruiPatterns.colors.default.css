@@ -1,0 +1,25 @@
+mzrui-patterns {
+	--mzruiPatterns-panel-menu-color: #fff;
+	--mzruiPatterns-panel-menu-bg: #666;
+	--mzruiPatterns-panel-btnSolid-bg: #444;
+	--mzruiPatterns-newSlicesBtn-color: #e29d8a;
+	--mzruiPatterns-newSynthBtn-color: #a5d6a7;
+	--mzruiPatterns-newDrumsBtn-color: #81d4fa;
+	--mzruiPatterns-synth-bg: #528754;
+	--mzruiPatterns-synth-color: #222;
+	--mzruiPatterns-synth-selected-color: #444;
+	--mzruiPatterns-synth-expand-bg: #0000001a;
+	--mzruiPatterns-synth-selected-bg: #66bb6a;
+	--mzruiPatterns-synth-namehover-color: #7b7;
+	--mzruiPatterns-synth-patterns-bg: #0006;
+	--mzruiPatterns-synth-dest-bg: #0000001a;
+	--mzruiPatterns-synth-placeholder-color: #fff6;
+	--mzruiPatterns-synth-placeholder-bg: #0003;
+	--mzruiPatterns-pattern-bg: #334;
+	--mzruiPatterns-pattern-color: var( --mzrui-col-pattern );
+	--mzruiPatterns-pattern-selected-bg: var( --mzrui-col-pattern );
+	--mzruiPatterns-pattern-selected-color: #223;
+	--mzruiPatterns-pattern-head-bg: #0003;
+	--mzruiPatterns-pattern-head-selected-bg: #fff3;
+	--mzruiPatterns-pattern-dest-bg: #fff1;
+}

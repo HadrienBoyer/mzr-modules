@@ -1,0 +1,24 @@
+body {
+	color-scheme: dark;
+	--mzrui-rgb-pan: 221, 153, 255;                      /* #d9f */
+	--mzrui-rgb-gain: 255, 255, 153;                     /* #ff9 */
+	--mzrui-rgb-detune: 255, 255, 255;                   /* #fff */
+	--mzrui-rgb-pattern: 85, 170, 204;                   /* #5ac */
+	--mzrui-rgb-patternSelected: 255, 136, 136;          /* #f88 */
+	--mzrui-rgb-currentTimeCursor: 255, 255, 153;        /* #ff9 */
+	--mzrui-col-pan: rgb( var( --mzrui-rgb-pan ) );
+	--mzrui-col-gain: rgb( var( --mzrui-rgb-gain ) );
+	--mzrui-col-detune: rgb( var( --mzrui-rgb-detune ) );
+	--mzrui-col-pattern: rgb( var( --mzrui-rgb-pattern ) );
+	--mzrui-col-lowpass: #d96;
+	--mzrui-col-patternSelected: rgb( var( --mzrui-rgb-patternSelected ) );
+	--mzrui-col-currentTimeCursor: rgb( var( --mzrui-rgb-currentTimeCursor ) );
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #ddd #222;
+}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background-color: #222; }
+::-webkit-scrollbar-thumb { background-color: #ddd; }

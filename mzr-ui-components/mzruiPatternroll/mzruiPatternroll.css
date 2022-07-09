@@ -1,0 +1,83 @@
+mzrui-patternroll {
+	display: flex;
+	height: 100%;
+}
+
+.mzruiPatternroll-block {
+	display: flex;
+	flex-direction: column;
+	white-space: nowrap;
+	color: var( --mzruiPatterns-pattern-color );
+	--mzruiPatterns-pattern-color: #223;
+}
+.mzrui-mute .mzruiPatternroll-block {
+	opacity: .5;
+}
+.mzruiPatternroll-block-header {
+	position: relative;
+	box-sizing: border-box;
+	z-index: 1;
+	display: flex;
+	border-radius: inherit;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 4px;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #fff3;
+	pointer-events: none;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.mzruiPatternroll-block-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.mzruiPatternroll-block-content {
+	flex: 1;
+	position: relative;
+	pointer-events: none;
+}
+.mzruiPatternroll-block[ data-missing ] .mzruiPatternroll-block-content {
+	display: none;
+}
+.mzruiPatternroll-block-content svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .8;
+	fill: currentColor;
+}
+
+.mzrui-row-small .mzruiPatternroll-block-header {
+	background-color: inherit;
+}
+.mzrui-row-small .mzruiPatternroll-block-header,
+.mzrui-row-small .mzruiPatternroll-block-content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.mzruiPatternroll-block-placeholder {
+	flex: 1;
+	display: none;
+	align-items: center;
+	pointer-events: none;
+	font-size: 14px;
+	opacity: .5;
+}
+.mzruiPatternroll-block[ data-missing ] .mzruiPatternroll-block-placeholder {
+	display: flex;
+}
+.mzruiPatternroll-block-placeholderIcon {
+	margin: 0 8px;
+}
+.mzruiPatternroll-block-placeholderText {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	user-select: none;
+	-webkit-user-select: none;
+}

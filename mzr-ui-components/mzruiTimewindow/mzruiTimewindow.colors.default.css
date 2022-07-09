@@ -1,0 +1,9 @@
+mzrui-timewindow {
+	--mzruiTimewindow-bg: #456168;
+	--mzruiTimewindow-color: #fff;
+	--mzruiTimewindow-loop-bg: #0004;
+	--mzruiTimewindow-panel-bg: #555;
+	--mzruiTimewindow-panel-border: #222;
+	--mzruiTimewindow-panelUp-bg: #444;
+	--mzruiTimewindow-currentTime-fill: var( --mzrui-col-currentTimeCursor );
+}
