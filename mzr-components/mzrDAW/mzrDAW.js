@@ -579,7 +579,7 @@ class MZRDAW {
 
 	// .........................................................................
 	#setTitle( cmpName ) {
-		const name = cmpName || "GridSound";
+		const name = cmpName || "MozaRythm";
 
 		document.title = this.#dawcore.compositionNeedSave() ? `*${ name }` : name;
 	}

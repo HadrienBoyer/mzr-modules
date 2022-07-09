@@ -40,7 +40,7 @@ function lg( a ) { return console.log.apply( console, arguments ), a; }
 		MZRUI.$createElement( "div", { id: "testFoot" },
 			MZRUI.$createElement( "div", { id: "testCopyright" },
 				MZRUI.$createElement( "span", null, "© 2022 " ),
-				MZRUI.$createElement( "a", { href: "https://gridsound.com" }, "gridsound.com" ),
+				MZRUI.$createElement( "a", { href: "https://mozarythm.com" }, "mozarythm.com" ),
 				MZRUI.$createElement( "span", null, " all rights reserved" ),
 			),
 		),

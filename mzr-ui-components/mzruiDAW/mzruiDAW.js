@@ -112,7 +112,7 @@ class mzruiDAW extends HTMLElement {
 
 			dt.icon = "none";
 			dt.spin = "on";
-			fetch( `https://gridsound.com/daw/VERSION?${ Math.random() }` )
+			fetch( `https://mozarythm.com/daw/VERSION?${ Math.random() }` )
 				.then( res => res.text(), MZRUI.$noop )
 				.then( res => {
 					dt.spin = "";
@@ -225,7 +225,7 @@ class mzruiDAW extends HTMLElement {
 					break;
 				case "username":
 					MZRUI.$setAttribute( this.#elements.userAvatar, "href",
-						val && `https://gridsound.com/#/u/${ val }` );
+						val && `https://mozarythm.com/#/u/${ val }` );
 					break;
 				case "name":
 					this.#elements.cmpName.textContent = val;

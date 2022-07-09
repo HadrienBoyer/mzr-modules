@@ -22,8 +22,8 @@ MZRUI.$setTemplate( "mzrui-daw-popup-auth", () =>
 			),
 			MZRUI.$createElement( "div", { class: "mzruiDAW-popup-auth-error" } ),
 		),
-		MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", href: "https://gridsound.com/#/forgotPassword" }, "Forgot password ?" ),
+		MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", href: "https://mozarythm.com/#/forgotPassword" }, "Forgot password ?" ),
 		MZRUI.$createElement( "br" ),
-		MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", href: "https://gridsound.com/#/auth" }, "Create a new account" ),
+		MZRUI.$createElement( "a", { target: "_blank", rel: "noopener", href: "https://mozarythm.com/#/auth" }, "Create a new account" ),
 	)
 );

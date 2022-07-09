@@ -54,7 +54,7 @@
     <script crossorigin="anonymous" defer="defer" type="application/javascript" integrity="sha512-N8ZYYG5hPVMwAkdnAGMxuRJH6O4P/bzENyh204QF3z3xTQE8dXFNo2dUhUfcLcx4DL4eEgrTkjpPtBDabOzAFw==" src="https://github.githubassets.com/assets/wiki-37c658606e61.js"></script>
 
 
-  <title>composition.mzr · gridsound/daw Wiki</title>
+  <title>composition.mzr · mozarythm/daw Wiki</title>
 
 
 
@@ -90,13 +90,13 @@
 
     <meta name="viewport" content="width=device-width">
     
-      <meta name="description" content="GridSound (0.36.3) wants to be an open source online digital audio workstation following the new WebAudio API 🎛🎹🎵✨ - composition.mzr · gridsound/daw Wiki">
+      <meta name="description" content="MozaRythm (0.1.1) wants to be an open source online digital audio workstation following the new WebAudio API 🎛🎹🎵✨ - composition.mzr · mozarythm/daw Wiki">
       <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <meta property="fb:app_id" content="1401488693436528">
     <meta name="apple-itunes-app" content="app-id=1477376905" />
-      <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/55375779/97e0d880-7df7-11e9-965d-31e251a6b4d0" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="composition.mzr · gridsound/daw Wiki" /><meta name="twitter:description" content="GridSound (0.36.3) wants to be an open source online digital audio workstation following the new WebAudio API 🎛🎹🎵✨ - composition.mzr · gridsound/daw Wiki" />
-      <meta property="og:image" content="https://repository-images.githubusercontent.com/55375779/97e0d880-7df7-11e9-965d-31e251a6b4d0" /><meta property="og:image:alt" content="GridSound (0.36.3) wants to be an open source online digital audio workstation following the new WebAudio API 🎛🎹🎵✨ - composition.mzr · gridsound/daw Wiki" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="composition.mzr · gridsound/daw Wiki" /><meta property="og:url" content="https://github.com/gridsound/daw" /><meta property="og:description" content="GridSound (0.36.3) wants to be an open source online digital audio workstation following the new WebAudio API 🎛🎹🎵✨ - composition.mzr · gridsound/daw Wiki" />
+      <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/55375779/97e0d880-7df7-11e9-965d-31e251a6b4d0" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="composition.mzr · mozarythm/daw Wiki" /><meta name="twitter:description" content="MozaRythm (0.36.3) wants to be an open source online digital audio workstation following the new WebAudio API 🎛🎹🎵✨ - composition.mzr · mozarythm/daw Wiki" />
+      <meta property="og:image" content="https://repository-images.githubusercontent.com/55375779/97e0d880-7df7-11e9-965d-31e251a6b4d0" /><meta property="og:image:alt" content="MozaRythm (0.36.3) wants to be an open source online digital audio workstation following the new WebAudio API 🎛🎹🎵✨ - composition.mzr · mozarythm/daw Wiki" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="composition.mzr · mozarythm/daw Wiki" /><meta property="og:url" content="https://github.com/mozarythm/daw" /><meta property="og:description" content="MozaRythm (0.36.3) wants to be an open source online digital audio workstation following the new WebAudio API 🎛🎹🎵✨ - composition.mzr · mozarythm/daw Wiki" />
       
     <link rel="assets" href="https://github.githubassets.com/">
       <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/6382986/ws?session=eyJ2IjoiVjMiLCJ1Ijo2MzgyOTg2LCJzIjo4NDgwNDExNzAsImMiOjMwMzUxNzU3OTIsInQiOjE2NTczMjU3NDV9--9b813fc2cd0bbbf6a321d50eb96e52779274affd379dc2dd15f1ed457d04442d" data-refresh-url="/_alive" data-session-id="a2096ae3796cb421cfb2fd4c3cdbfff4ba5862ea17fe7735910c627187ad062b">
@@ -123,9 +123,9 @@
   <meta name="turbo-cache-control" content="no-preview" data-pjax-transient="">
 
     
-  <meta name="go-import" content="github.com/gridsound/daw git https://github.com/gridsound/daw.git">
+  <meta name="go-import" content="github.com/mozarythm/daw git https://github.com/mozarythm/daw.git">
 
-  <meta name="octolytics-dimension-user_id" content="18252268" /><meta name="octolytics-dimension-user_login" content="gridsound" /><meta name="octolytics-dimension-repository_id" content="55375779" /><meta name="octolytics-dimension-repository_nwo" content="gridsound/daw" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="55375779" /><meta name="octolytics-dimension-repository_network_root_nwo" content="gridsound/daw" />
+  <meta name="octolytics-dimension-user_id" content="18252268" /><meta name="octolytics-dimension-user_login" content="mozarythm" /><meta name="octolytics-dimension-repository_id" content="55375779" /><meta name="octolytics-dimension-repository_nwo" content="mozarythm/daw" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="55375779" /><meta name="octolytics-dimension-repository_network_root_nwo" content="mozarythm/daw" />
 
 
 
@@ -199,7 +199,7 @@
 <div class="header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mzr-0 mzr-md-3 scoped-search site-scoped-search js-jump-to"
 >
   <div class="position-relative">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="55375779" data-scoped-search-url="/gridsound/daw/search" data-owner-scoped-search-url="/orgs/gridsound/search" data-unscoped-search-url="/search" data-turbo="false" action="/gridsound/daw/search" accept-charset="UTF-8" method="get">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" role="search" aria-label="Site" data-scope-type="Repository" data-scope-id="55375779" data-scoped-search-url="/mozarythm/daw/search" data-owner-scoped-search-url="/orgs/mozarythm/search" data-unscoped-search-url="/search" data-turbo="false" action="/mozarythm/daw/search" accept-charset="UTF-8" method="get">
       <label class="form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
         <input type="text"
           class="form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
@@ -419,7 +419,7 @@
 
     <a class="js-selected-navigation-item Header-link d-block d-md-none py-2 py-md-3 border-top border-md-top-0 border-white-fade" data-ga-click="Header, click, Nav menu - item:workspaces context:user" data-turbo="false" data-selected-links="/codespaces /codespaces" href="/codespaces">Codespaces</a>
 
-      <a class="js-selected-navigation-item Header-link d-block d-md-none py-2 py-md-3 border-top border-md-top-0 border-white-fade" data-ga-click="Header, click, Nav menu - item:Sponsors" data-hydro-click="{&quot;event_type&quot;:&quot;sponsors.button_click&quot;,&quot;payload&quot;:{&quot;button&quot;:&quot;HEADER_SPONSORS_DASHBOARD&quot;,&quot;sponsorable_login&quot;:&quot;HadrienBoyer&quot;,&quot;originating_url&quot;:&quot;https://github.com/gridsound/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="6be035b5dc24356eee35dd2391830542a32002b4ec76cc5d317d4f434de8892a" data-turbo="false" data-selected-links=" /sponsors/accounts" href="/sponsors/accounts">Sponsors</a>
+      <a class="js-selected-navigation-item Header-link d-block d-md-none py-2 py-md-3 border-top border-md-top-0 border-white-fade" data-ga-click="Header, click, Nav menu - item:Sponsors" data-hydro-click="{&quot;event_type&quot;:&quot;sponsors.button_click&quot;,&quot;payload&quot;:{&quot;button&quot;:&quot;HEADER_SPONSORS_DASHBOARD&quot;,&quot;sponsorable_login&quot;:&quot;HadrienBoyer&quot;,&quot;originating_url&quot;:&quot;https://github.com/mozarythm/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="6be035b5dc24356eee35dd2391830542a32002b4ec76cc5d317d4f434de8892a" data-turbo="false" data-selected-links=" /sponsors/accounts" href="/sponsors/accounts">Sponsors</a>
 
     <a class="Header-link d-block d-md-none mzr-0 mzr-md-3 py-2 py-md-3 border-top border-md-top-0 border-white-fade" data-turbo="false" href="/settings/profile">Settings</a>
 
@@ -618,7 +618,7 @@
   <details-dialog class="command-palette-details-dialog d-flex flex-column flex-justify-center height-fit" aria-label="command palette">
     <command-palette
       class="command-palette color-bg-default rounded-3 border color-shadow-small"
-      data-return-to=/gridsound/daw/wiki/composition.mzr
+      data-return-to=/mozarythm/daw/wiki/composition.mzr
       data-user-id="6382986"
       data-activation-hotkey="Mod+k,Mod+Alt+k"
       data-command-mode-hotkey="Mod+Shift+k"
@@ -721,14 +721,14 @@
         <command-palette-scope >
           <div data-target="command-palette-scope.placeholder" hidden class="color-fg-subtle">/&nbsp;&nbsp;<span class="text-semibold color-fg-default">...</span>&nbsp;&nbsp;/&nbsp;&nbsp;</div>
               <command-palette-token
-                data-text="gridsound"
+                data-text="mozarythm"
                 data-id="MDEyOk9yZ2FuaXphdGlvbjE4MjUyMjY4"
                 data-type="owner"
-                data-value="gridsound"
+                data-value="mozarythm"
                 data-targets="command-palette-scope.tokens"
                 class="color-fg-default text-semibold"
                 style="white-space:nowrap;line-height:20px;"
-                >gridsound<span class="color-fg-subtle text-normal">&nbsp;&nbsp;/&nbsp;&nbsp;</span></command-palette-token>
+                >mozarythm<span class="color-fg-subtle text-normal">&nbsp;&nbsp;/&nbsp;&nbsp;</span></command-palette-token>
               <command-palette-token
                 data-text="daw"
                 data-id="MDEwOlJlcG9zaXRvcnk1NTM3NTc3OQ=="
@@ -1197,7 +1197,7 @@
             </command-palette-item-group>
 
             <command-palette-page
-              data-page-title="gridsound"
+              data-page-title="mozarythm"
               data-scope-id="MDEyOk9yZ2FuaXphdGlvbjE4MjUyMjY4"
               data-scope-type="owner"
               data-targets="command-palette-page-stack.defaultPages"
@@ -1217,7 +1217,7 @@
         <command-palette-page data-is-root>
         </command-palette-page>
           <command-palette-page
-            data-page-title="gridsound"
+            data-page-title="mozarythm"
             data-scope-id="MDEyOk9yZ2FuaXphdGlvbjE4MjUyMjY4"
             data-scope-type="owner"
           >
@@ -1553,11 +1553,11 @@
     <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
 </svg>
   <span class="author flex-self-stretch" itemprop="author">
-    <a class="url fn" rel="author" data-hovercard-type="organization" data-hovercard-url="/orgs/gridsound/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/gridsound">gridsound</a>
+    <a class="url fn" rel="author" data-hovercard-type="organization" data-hovercard-url="/orgs/mozarythm/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/mozarythm">mozarythm</a>
   </span>
   <span class="mx-1 flex-self-stretch color-fg-muted">/</span>
   <strong itemprop="name" class="mzr-2 flex-self-stretch">
-    <a data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" href="/gridsound/daw">daw</a>
+    <a data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" href="/mozarythm/daw">daw</a>
   </strong>
 
   <span></span><span class="Label Label--secondary v-align-middle mzr-1">Public</span>
@@ -1567,7 +1567,7 @@
 
           <ul class="pagehead-actions flex-shrink-0 d-none d-md-inline" style="padding: 2px 0;">
       <li>
-        <include-fragment src="/gridsound/daw/sponsor_button"></include-fragment>
+        <include-fragment src="/mozarythm/daw/sponsor_button"></include-fragment>
       </li>
 
     
@@ -1583,7 +1583,7 @@
         data-action="toggle:notifications-list-subscription-form#detailsToggled"
       >
 
-      <summary data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:55375779,&quot;originating_url&quot;:&quot;https://github.com/gridsound/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="8b91872f55c074db40afa3af2f4daa18edced2f09bfec2c5a0df9677d68aa201" data-ga-click="Repository, click Watch settings, action:wiki#show" aria-label="Notification settings" data-view-component="true" class="btn-sm btn">  <span data-menu-button>
+      <summary data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;WATCH_BUTTON&quot;,&quot;repository_id&quot;:55375779,&quot;originating_url&quot;:&quot;https://github.com/mozarythm/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="8b91872f55c074db40afa3af2f4daa18edced2f09bfec2c5a0df9677d68aa201" data-ga-click="Repository, click Watch settings, action:wiki#show" aria-label="Notification settings" data-view-component="true" class="btn-sm btn">  <span data-menu-button>
             <span
               hidden
               
@@ -1905,7 +1905,7 @@
   <li>
       
     <div data-view-component="true" class="BtnGroup">
-        <a href="/gridsound/daw/fork" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:55375779,&quot;originating_url&quot;:&quot;https://github.com/gridsound/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="ec7662f5677fac2c3dec42cd1c55bcd7df245560be4d435afec937fdf73b1c66" data-ga-click="Repository, show fork modal, action:wiki#show; text:Fork" aria-label="Fork your own copy of gridsound/daw" data-view-component="true" class="btn-sm btn BtnGroup-item">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked mzr-2">
+        <a href="/mozarythm/daw/fork" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FORK_BUTTON&quot;,&quot;repository_id&quot;:55375779,&quot;originating_url&quot;:&quot;https://github.com/mozarythm/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="ec7662f5677fac2c3dec42cd1c55bcd7df245560be4d435afec937fdf73b1c66" data-ga-click="Repository, show fork modal, action:wiki#show; text:Fork" aria-label="Fork your own copy of mozarythm/daw" data-view-component="true" class="btn-sm btn BtnGroup-item">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked mzr-2">
     <path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
 </svg>Fork
             <span id="repo-network-counter" data-pjax-replace="true" title="104" data-view-component="true" class="Counter">104</span>
@@ -1919,7 +1919,7 @@
 </summary>
   <details-menu
     class="SelectMenu right-0"
-      src="/gridsound/daw/my_forks_menu_content?can_fork=true"
+      src="/mozarythm/daw/my_forks_menu_content?can_fork=true"
       
       role="menu"
       
@@ -1973,19 +1973,19 @@
 </template>
 
   <div data-view-component="true" class="js-toggler-container js-social-container starring-container on BtnGroup d-flex">
-    <form class="starred js-social-form BtnGroup-parent flex-auto js-deferred-toggler-target" data-turbo="false" action="/gridsound/daw/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="U-oWXiFVDDR7RvNG32sYxAS0-v9JSY0KIAHCYc8WKKUWLs9gA3cBPmSrQYNXfKz2IWWmhgEtMgONqaXDS-LKUw" autocomplete="off" />
+    <form class="starred js-social-form BtnGroup-parent flex-auto js-deferred-toggler-target" data-turbo="false" action="/mozarythm/daw/unstar" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="U-oWXiFVDDR7RvNG32sYxAS0-v9JSY0KIAHCYc8WKKUWLs9gA3cBPmSrQYNXfKz2IWWmhgEtMgONqaXDS-LKUw" autocomplete="off" />
         <input type="hidden" value="c6QUSqcKV8iGSSXjF_9NYGOXcRjFT84bZRM6-ptjybg2YM10hShawpmklyaf6PlSRkYtYY0rcRLIu11YH5crTg" data-csrf="true" class="js-confirm-csrf-token" />
       <input type="hidden" name="context" value="repository">
-      <button data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:55375779,&quot;originating_url&quot;:&quot;https://github.com/gridsound/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="2ebf7d08c09385b77f01ecd02368f4fd4df23f0aa25a5195e78eaaf3fa7389d4" data-ga-click="Repository, click unstar button, action:wiki#show; text:Unstar" aria-label="Unstar this repository" type="submit" data-view-component="true" class="rounded-left-2 border-right-0 btn-sm btn BtnGroup-item">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star-fill starred-button-icon d-inline-block mzr-2">
+      <button data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;UNSTAR_BUTTON&quot;,&quot;repository_id&quot;:55375779,&quot;originating_url&quot;:&quot;https://github.com/mozarythm/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="2ebf7d08c09385b77f01ecd02368f4fd4df23f0aa25a5195e78eaaf3fa7389d4" data-ga-click="Repository, click unstar button, action:wiki#show; text:Unstar" aria-label="Unstar this repository" type="submit" data-view-component="true" class="rounded-left-2 border-right-0 btn-sm btn BtnGroup-item">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star-fill starred-button-icon d-inline-block mzr-2">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
 </svg><span data-view-component="true" class="d-inline">
           Starred
 </span>          <span id="repo-stars-counter-unstar" aria-label="1048 users starred this repository" data-singular-suffix="user starred this repository" data-plural-suffix="users starred this repository" data-pjax-replace="true" data-turbo-replace="true" title="1,048" data-view-component="true" class="Counter js-social-count">1k</span>
   
 </button></form>
-    <form class="unstarred js-social-form BtnGroup-parent flex-auto" data-turbo="false" action="/gridsound/daw/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="aVGrGaF9Ij-X2Dv3boQqPDQ4qN-66oCXwrfRaWpQh7HtarrAu0LNM66MJPCrZjM6miMAp6L8tr5vP5vGSsnhRQ" autocomplete="off" />
+    <form class="unstarred js-social-form BtnGroup-parent flex-auto" data-turbo="false" action="/mozarythm/daw/star" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="aVGrGaF9Ij-X2Dv3boQqPDQ4qN-66oCXwrfRaWpQh7HtarrAu0LNM66MJPCrZjM6miMAp6L8tr5vP5vGSsnhRQ" autocomplete="off" />
       <input type="hidden" name="context" value="repository">
-      <button data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:55375779,&quot;originating_url&quot;:&quot;https://github.com/gridsound/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="da192558fc4ce009fde7c802cb1d9357c006a738f2b9e3c1493d77cf2c04356e" data-ga-click="Repository, click star button, action:wiki#show; text:Star" aria-label="Star this repository" type="submit" data-view-component="true" class="js-toggler-target rounded-left-2 btn-sm btn BtnGroup-item">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star d-inline-block mzr-2">
+      <button data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;STAR_BUTTON&quot;,&quot;repository_id&quot;:55375779,&quot;originating_url&quot;:&quot;https://github.com/mozarythm/daw/wiki/composition.mzr&quot;,&quot;user_id&quot;:6382986}}" data-hydro-click-hmac="da192558fc4ce009fde7c802cb1d9357c006a738f2b9e3c1493d77cf2c04356e" data-ga-click="Repository, click star button, action:wiki#show; text:Star" aria-label="Star this repository" type="submit" data-view-component="true" class="js-toggler-target rounded-left-2 btn-sm btn BtnGroup-item">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star d-inline-block mzr-2">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path>
 </svg><span data-view-component="true" class="d-inline">
           Star
@@ -2000,7 +2000,7 @@
 </summary>
   <details-menu
     class="SelectMenu right-0"
-      src="/gridsound/daw/lists"
+      src="/mozarythm/daw/lists"
       
       role="menu"
       
@@ -2049,7 +2049,7 @@
 
   <ul data-view-component="true" class="UnderlineNav-body list-style-none">
       <li data-view-component="true" class="d-inline-flex">
-  <a id="code-tab" href="/gridsound/daw" data-tab-item="i0code-tab" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages repo_deployments /gridsound/daw" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g c" data-ga-click="Repository, Navigation click, Code tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+  <a id="code-tab" href="/mozarythm/daw" data-tab-item="i0code-tab" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages repo_deployments /mozarythm/daw" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g c" data-ga-click="Repository, Navigation click, Code tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
     
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
     <path fill-rule="evenodd" d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"></path>
@@ -2061,7 +2061,7 @@
     
 </a></li>
       <li data-view-component="true" class="d-inline-flex">
-  <a id="issues-tab" href="/gridsound/daw/issues" data-tab-item="i1issues-tab" data-selected-links="repo_issues repo_labels repo_milestones /gridsound/daw/issues" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g i" data-ga-click="Repository, Navigation click, Issues tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+  <a id="issues-tab" href="/mozarythm/daw/issues" data-tab-item="i1issues-tab" data-selected-links="repo_issues repo_labels repo_milestones /mozarythm/daw/issues" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g i" data-ga-click="Repository, Navigation click, Issues tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
     
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-issue-opened UnderlineNav-octicon d-none d-sm-inline">
     <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path><path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
@@ -2073,7 +2073,7 @@
     
 </a></li>
       <li data-view-component="true" class="d-inline-flex">
-  <a id="pull-requests-tab" href="/gridsound/daw/pulls" data-tab-item="i2pull-requests-tab" data-selected-links="repo_pulls checks /gridsound/daw/pulls" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g p" data-ga-click="Repository, Navigation click, Pull requests tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+  <a id="pull-requests-tab" href="/mozarythm/daw/pulls" data-tab-item="i2pull-requests-tab" data-selected-links="repo_pulls checks /mozarythm/daw/pulls" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g p" data-ga-click="Repository, Navigation click, Pull requests tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
     
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-git-pull-request UnderlineNav-octicon d-none d-sm-inline">
     <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"></path>
@@ -2085,7 +2085,7 @@
     
 </a></li>
       <li data-view-component="true" class="d-inline-flex">
-  <a id="discussions-tab" href="/gridsound/daw/discussions" data-tab-item="i3discussions-tab" data-selected-links="repo_discussions /gridsound/daw/discussions" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g g" data-ga-click="Repository, Navigation click, Discussions tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+  <a id="discussions-tab" href="/mozarythm/daw/discussions" data-tab-item="i3discussions-tab" data-selected-links="repo_discussions /mozarythm/daw/discussions" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g g" data-ga-click="Repository, Navigation click, Discussions tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
     
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-comment-discussion UnderlineNav-octicon d-none d-sm-inline">
     <path fill-rule="evenodd" d="M1.5 2.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v5.5a.25.25 0 01-.25.25h-3.5a.75.75 0 00-.53.22L3.5 11.44V9.25a.75.75 0 00-.75-.75h-1a.25.25 0 01-.25-.25v-5.5zM1.75 1A1.75 1.75 0 000 2.75v5.5C0 9.216.784 10 1.75 10H2v1.543a1.457 1.457 0 002.487 1.03L7.061 10h3.189A1.75 1.75 0 0012 8.25v-5.5A1.75 1.75 0 0010.25 1h-8.5zM14.5 4.75a.25.25 0 00-.25-.25h-.5a.75.75 0 110-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0114.25 12H14v1.543a1.457 1.457 0 01-2.487 1.03L9.22 12.28a.75.75 0 111.06-1.06l2.22 2.22v-2.19a.75.75 0 01.75-.75h1a.25.25 0 00.25-.25v-5.5z"></path>
@@ -2097,7 +2097,7 @@
     
 </a></li>
       <li data-view-component="true" class="d-inline-flex">
-  <a id="actions-tab" href="/gridsound/daw/actions" data-tab-item="i4actions-tab" data-selected-links="repo_actions /gridsound/daw/actions" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g a" data-analytics-event="{&quot;category&quot;:&quot;Actions&quot;,&quot;action&quot;:&quot;clicked&quot;,&quot;label&quot;:&quot;ref_cta:Actions;ref_loc:navigation_helper&quot;}" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+  <a id="actions-tab" href="/mozarythm/daw/actions" data-tab-item="i4actions-tab" data-selected-links="repo_actions /mozarythm/daw/actions" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g a" data-analytics-event="{&quot;category&quot;:&quot;Actions&quot;,&quot;action&quot;:&quot;clicked&quot;,&quot;label&quot;:&quot;ref_cta:Actions;ref_loc:navigation_helper&quot;}" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
     
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-play UnderlineNav-octicon d-none d-sm-inline">
     <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM6.379 5.227A.25.25 0 006 5.442v5.117a.25.25 0 00.379.214l4.264-2.559a.25.25 0 000-.428L6.379 5.227z"></path>
@@ -2109,7 +2109,7 @@
     
 </a></li>
       <li data-view-component="true" class="d-inline-flex">
-  <a id="projects-tab" href="/gridsound/daw/projects?type=beta" data-tab-item="i5projects-tab" data-selected-links="repo_projects new_repo_project repo_project /gridsound/daw/projects?type=beta" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g b" data-ga-click="Repository, Navigation click, Projects tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+  <a id="projects-tab" href="/mozarythm/daw/projects?type=beta" data-tab-item="i5projects-tab" data-selected-links="repo_projects new_repo_project repo_project /mozarythm/daw/projects?type=beta" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g b" data-ga-click="Repository, Navigation click, Projects tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
     
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-table UnderlineNav-octicon d-none d-sm-inline">
     <path fill-rule="evenodd" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v3.585a.746.746 0 010 .83v8.085A1.75 1.75 0 0114.25 16H6.309a.748.748 0 01-1.118 0H1.75A1.75 1.75 0 010 14.25V6.165a.746.746 0 010-.83V1.75zM1.5 6.5v7.75c0 .138.112.25.25.25H5v-8H1.5zM5 5H1.5V1.75a.25.25 0 01.25-.25H5V5zm1.5 1.5v8h7.75a.25.25 0 00.25-.25V6.5h-8zm8-1.5h-8V1.5h7.75a.25.25 0 01.25.25V5z"></path>
@@ -2121,7 +2121,7 @@
     
 </a></li>
       <li data-view-component="true" class="d-inline-flex">
-  <a id="wiki-tab" href="/gridsound/daw/wiki" data-tab-item="i6wiki-tab" data-selected-links="repo_wiki /gridsound/daw/wiki" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g w" data-ga-click="Repository, Navigation click, Wikis tab" aria-current="page" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item selected">
+  <a id="wiki-tab" href="/mozarythm/daw/wiki" data-tab-item="i6wiki-tab" data-selected-links="repo_wiki /mozarythm/daw/wiki" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g w" data-ga-click="Repository, Navigation click, Wikis tab" aria-current="page" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item selected">
     
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-book UnderlineNav-octicon d-none d-sm-inline">
     <path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"></path>
@@ -2133,18 +2133,18 @@
     
 </a></li>
       <li data-view-component="true" class="d-inline-flex">
-  <a id="security-tab" href="/gridsound/daw/security" data-tab-item="i7security-tab" data-selected-links="security overview alerts policy token_scanning code_scanning /gridsound/daw/security" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g s" data-ga-click="Repository, Navigation click, Security tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+  <a id="security-tab" href="/mozarythm/daw/security" data-tab-item="i7security-tab" data-selected-links="security overview alerts policy token_scanning code_scanning /mozarythm/daw/security" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g s" data-ga-click="Repository, Navigation click, Security tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
     
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-shield UnderlineNav-octicon d-none d-sm-inline">
     <path fill-rule="evenodd" d="M7.467.133a1.75 1.75 0 011.066 0l5.25 1.68A1.75 1.75 0 0115 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.7 1.7 0 01-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 011.217-1.667l5.25-1.68zm.61 1.429a.25.25 0 00-.153 0l-5.25 1.68a.25.25 0 00-.174.238V7c0 1.358.275 2.666 1.057 3.86.784 1.194 2.121 2.34 4.366 3.297a.2.2 0 00.154 0c2.245-.956 3.582-2.104 4.366-3.298C13.225 9.666 13.5 8.36 13.5 7V3.48a.25.25 0 00-.174-.237l-5.25-1.68zM9 10.5a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.75a.75.75 0 10-1.5 0v3a.75.75 0 001.5 0v-3z"></path>
 </svg>
           <span data-content="Security">Security</span>
-            <include-fragment src="/gridsound/daw/security/overall-count" accept="text/fragment+html"></include-fragment>
+            <include-fragment src="/mozarythm/daw/security/overall-count" accept="text/fragment+html"></include-fragment>
 
     
 </a></li>
       <li data-view-component="true" class="d-inline-flex">
-  <a id="insights-tab" href="/gridsound/daw/pulse" data-tab-item="i8insights-tab" data-selected-links="repo_graphs repo_contributors dependency_graph dependabot_updates pulse people community /gridsound/daw/pulse" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-ga-click="Repository, Navigation click, Insights tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
+  <a id="insights-tab" href="/mozarythm/daw/pulse" data-tab-item="i8insights-tab" data-selected-links="repo_graphs repo_contributors dependency_graph dependabot_updates pulse people community /mozarythm/daw/pulse" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-ga-click="Repository, Navigation click, Insights tab" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
     
                   <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-graph UnderlineNav-octicon d-none d-sm-inline">
     <path fill-rule="evenodd" d="M1.5 1.75a.75.75 0 00-1.5 0v12.5c0 .414.336.75.75.75h14.5a.75.75 0 000-1.5H1.5V1.75zm14.28 2.53a.75.75 0 00-1.06-1.06L10 7.94 7.53 5.47a.75.75 0 00-1.06 0L3.22 8.72a.75.75 0 001.06 1.06L7 7.06l2.47 2.47a.75.75 0 001.06 0l5.25-5.25z"></path>
@@ -2168,39 +2168,39 @@
   
             <ul>
                 <li data-menu-item="i0code-tab" hidden>
-                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages repo_deployments /gridsound/daw" href="/gridsound/daw">
+                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages repo_deployments /mozarythm/daw" href="/mozarythm/daw">
                     Code
 </a>                </li>
                 <li data-menu-item="i1issues-tab" hidden>
-                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_issues repo_labels repo_milestones /gridsound/daw/issues" href="/gridsound/daw/issues">
+                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_issues repo_labels repo_milestones /mozarythm/daw/issues" href="/mozarythm/daw/issues">
                     Issues
 </a>                </li>
                 <li data-menu-item="i2pull-requests-tab" hidden>
-                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_pulls checks /gridsound/daw/pulls" href="/gridsound/daw/pulls">
+                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_pulls checks /mozarythm/daw/pulls" href="/mozarythm/daw/pulls">
                     Pull requests
 </a>                </li>
                 <li data-menu-item="i3discussions-tab" hidden>
-                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_discussions /gridsound/daw/discussions" href="/gridsound/daw/discussions">
+                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_discussions /mozarythm/daw/discussions" href="/mozarythm/daw/discussions">
                     Discussions
 </a>                </li>
                 <li data-menu-item="i4actions-tab" hidden>
-                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_actions /gridsound/daw/actions" href="/gridsound/daw/actions">
+                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_actions /mozarythm/daw/actions" href="/mozarythm/daw/actions">
                     Actions
 </a>                </li>
                 <li data-menu-item="i5projects-tab" hidden>
-                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_projects new_repo_project repo_project /gridsound/daw/projects?type=beta" href="/gridsound/daw/projects?type=beta">
+                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_projects new_repo_project repo_project /mozarythm/daw/projects?type=beta" href="/mozarythm/daw/projects?type=beta">
                     Projects
 </a>                </li>
                 <li data-menu-item="i6wiki-tab" hidden>
-                  <a role="menuitem" class="js-selected-navigation-item selected dropdown-item" aria-current="page" data-selected-links="repo_wiki /gridsound/daw/wiki" href="/gridsound/daw/wiki">
+                  <a role="menuitem" class="js-selected-navigation-item selected dropdown-item" aria-current="page" data-selected-links="repo_wiki /mozarythm/daw/wiki" href="/mozarythm/daw/wiki">
                     Wiki
 </a>                </li>
                 <li data-menu-item="i7security-tab" hidden>
-                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="security overview alerts policy token_scanning code_scanning /gridsound/daw/security" href="/gridsound/daw/security">
+                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="security overview alerts policy token_scanning code_scanning /mozarythm/daw/security" href="/mozarythm/daw/security">
                     Security
 </a>                </li>
                 <li data-menu-item="i8insights-tab" hidden>
-                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_graphs repo_contributors dependency_graph dependabot_updates pulse people community /gridsound/daw/pulse" href="/gridsound/daw/pulse">
+                  <a role="menuitem" class="js-selected-navigation-item dropdown-item" data-selected-links="repo_graphs repo_contributors dependency_graph dependabot_updates pulse people community /mozarythm/daw/pulse" href="/mozarythm/daw/pulse">
                     Insights
 </a>                </li>
             </ul>
@@ -2277,11 +2277,11 @@
     <path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"></path>
 </svg>
       </div>
-      <a class="flex-1 py-1 text-bold" href="/gridsound/daw/wiki/changelog">changelog</a>
+      <a class="flex-1 py-1 text-bold" href="/mozarythm/daw/wiki/changelog">changelog</a>
     </div>
   </summary>
 
-    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/gridsound/daw/wiki/changelog/_toc">
+    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/mozarythm/daw/wiki/changelog/_toc">
     </include-fragment>
 </details>
 
@@ -2300,7 +2300,7 @@
     <path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"></path>
 </svg>
       </div>
-      <a class="flex-1 py-1 text-bold" href="/gridsound/daw/wiki/composition.mzr">composition.mzr</a>
+      <a class="flex-1 py-1 text-bold" href="/mozarythm/daw/wiki/composition.mzr">composition.mzr</a>
     </div>
   </summary>
 
@@ -2322,11 +2322,11 @@
     <path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"></path>
 </svg>
       </div>
-      <a class="flex-1 py-1 text-bold" href="/gridsound/daw/wiki/GridSound-on-the-Web">GridSound on the Web</a>
+      <a class="flex-1 py-1 text-bold" href="/mozarythm/daw/wiki/MozaRythm-on-the-Web">MozaRythm on the Web</a>
     </div>
   </summary>
 
-    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/gridsound/daw/wiki/GridSound-on-the-Web/_toc">
+    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/mozarythm/daw/wiki/MozaRythm-on-the-Web/_toc">
     </include-fragment>
 </details>
 
@@ -2345,11 +2345,11 @@
     <path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"></path>
 </svg>
       </div>
-      <a class="flex-1 py-1 text-bold" href="/gridsound/daw/wiki/help">help</a>
+      <a class="flex-1 py-1 text-bold" href="/mozarythm/daw/wiki/help">help</a>
     </div>
   </summary>
 
-    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/gridsound/daw/wiki/help/_toc">
+    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/mozarythm/daw/wiki/help/_toc">
     </include-fragment>
 </details>
 
@@ -2368,11 +2368,11 @@
     <path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"></path>
 </svg>
       </div>
-      <a class="flex-1 py-1 text-bold" href="/gridsound/daw/wiki/help-pianoroll">help pianoroll</a>
+      <a class="flex-1 py-1 text-bold" href="/mozarythm/daw/wiki/help-pianoroll">help pianoroll</a>
     </div>
   </summary>
 
-    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/gridsound/daw/wiki/help-pianoroll/_toc">
+    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/mozarythm/daw/wiki/help-pianoroll/_toc">
     </include-fragment>
 </details>
 
@@ -2391,11 +2391,11 @@
     <path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"></path>
 </svg>
       </div>
-      <a class="flex-1 py-1 text-bold" href="/gridsound/daw/wiki/versions">versions</a>
+      <a class="flex-1 py-1 text-bold" href="/mozarythm/daw/wiki/versions">versions</a>
     </div>
   </summary>
 
-    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/gridsound/daw/wiki/versions/_toc">
+    <include-fragment class="js-wiki-sidebar-toc-fragment" loading="lazy" src="https://github.com/mozarythm/daw/wiki/versions/_toc">
     </include-fragment>
 </details>
 
@@ -2415,7 +2415,7 @@
                   data-autoselect
                   class="form-control input-sm text-small color-fg-muted input-monospace"
                   aria-label="Clone URL for this wiki"
-                  value="https://github.com/gridsound/daw.wiki.git"
+                  value="https://github.com/mozarythm/daw.wiki.git"
                   readonly>
               <span class="input-group-button">
                 <clipboard-copy for="wiki-clone-url" aria-label="Copy to clipboard" data-view-component="true" class="btn btn-sm zeroclipboard-button">
